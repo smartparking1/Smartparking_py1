@@ -53,8 +53,7 @@ class EmployeeLogin(APIView):
         #* creating JWT token by using algorithm HS256
         tocken=jwt.encode(payload,'secret',algorithm='HS256')
         responce =Response()
-        # print(type(obj),"ghjkl;lkjhgfghjkytguhitcfvgbhnj")
-        # print(type())
+        print('ok')
         responce.data={
                 'jwt':tocken,
                 'user':x[0]
