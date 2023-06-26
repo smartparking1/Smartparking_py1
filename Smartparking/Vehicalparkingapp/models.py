@@ -2,7 +2,10 @@ from django.db import models
 from BuildingDetails.models import *
 from employee_authentication.models import *
 # Create your models here.
+
+
 class VehicleParking(models.Model):
+    id = models.AutoField(primary_key=True)
     vehicle_no = models.CharField(max_length=45)
     vehicle_type = models.CharField(max_length=45)
     checkin_time = models.DateTimeField()

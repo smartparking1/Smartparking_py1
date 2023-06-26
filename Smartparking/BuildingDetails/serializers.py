@@ -10,7 +10,7 @@ class BuildingSerializer(serializers.ModelSerializer) :
     class Meta :
         model = BuildingDetails
         fields = '__all__'
-
+ 
 class FloorSerializer(serializers.ModelSerializer) :
     building = BuildingSerializer()
     class Meta :
@@ -42,7 +42,7 @@ class FloorsDetailsSerializer(serializers.ModelSerializer):
 class SlotSerializer(serializers.ModelSerializer):
     floor = FloorSerializer()
     class Meta:
-        model = FloorDetails
+        model = SlotDetails
         fields = '__all__'
     
     def create(self, validated_data):

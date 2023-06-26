@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'employee_authentication',
     'rest_framework',
     'BuildingDetails',
-    'Vehicalparkingapp'
+    'Vehicalparkingapp',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware'
+    'django.middleware.csrf.CsrfViewMiddleware',
+   'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'Smartparking.urls'
@@ -130,3 +132,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'employee_authentication.EmployeeDetails'
+CORS_ORIGIN_ALLOW_ALL = True
