@@ -129,12 +129,6 @@ class SlotUpdate(GenericAPIView, UpdateModelMixin):
     def perform_update(self, serializer):
         serializer.save()
 
-       
-
-
-
-
-
 
 class InsertSlots(APIView):
     def post(self, request, id):
