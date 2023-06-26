@@ -6,8 +6,9 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.mixins import *
 from rest_framework.exceptions import AuthenticationFailed
 import jwt,datetime
-
-
+from django.views.decorators.csrf import csrf_exempt
+from rest_framework.renderers import JSONRenderer
+from .service_of_empoyee import sending_jsonObject
 
 
 
@@ -16,6 +17,7 @@ import jwt,datetime
 class EmployeeRegister(GenericAPIView,CreateModelMixin):
     serializer_class=EmployeeSerializer
     queryset=EmployeeDetails.objects.all()
+    @csrf_exempt
     def post(self,request):
         return self.create(request)
     
@@ -27,12 +29,19 @@ class EmployeeLogin(APIView):
     def post(self,request):        
         email=request.data['email_id']
         password=request.data['password']
-        employee=EmployeeDetails.objects.filter(email_id=email).first()
+        employee=EmployeeDetails.objects.filter(email_id=email)
+        # obj= sending_jsonObject(employee)
+        serializer=EmployeeSerializer(data=employee,many=True)
+        serializer.is_valid()
+        x=((serializer.data))
+        
 
-        if employee is None:
+        if employee is None or len(employee)==0:
             raise AuthenticationFailed("Invalid User ")
+        employee=employee[0]
         if not employee.check_password(password):
             raise AuthenticationFailed("Invalid Password")
+
         
         payload ={
             'id':employee.email_id,
@@ -44,8 +53,13 @@ class EmployeeLogin(APIView):
         #* creating JWT token by using algorithm HS256
         tocken=jwt.encode(payload,'secret',algorithm='HS256')
         responce =Response()
+        # print(type(obj),"ghjkl;lkjhgfghjkytguhitcfvgbhnj")
+        # print(type())
         responce.data={
-                'jwt':tocken
+                'jwt':tocken,
+                'user':x[0]
+                
+     
             }
         responce.set_cookie(key='jwt',value=tocken,httponly=True)
         print(responce)

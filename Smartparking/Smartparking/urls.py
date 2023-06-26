@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path,include
 import employee_authentication
 import BuildingDetails
+import Vehicalparkingapp
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Employee/',include('employee_authentication.urls')),
     path('building/',include('BuildingDetails.urls')),
+    path('vehical/',include('Vehicalparkingapp.urls'))
 
 ]

@@ -9,5 +9,6 @@ urlpatterns = [
     path('UpdateFloor/<int:pk>/',UpdateFloor.as_view(),name='UpdateFloor'),
     path('DeleteFloorsAndGettingParticularfloor/<int:pk>/',DeleteFloorsAndGettingParticularfloor.as_view(),name='DeleteFloorsAndGettingParticularfloor'),
     path('insertslot/<int:id>/',InsertSlots.as_view(),name='insertslot'),
+    path('GettingAllSlots/',GettingAllSlots.as_view(),name='GettingAllSlots'),
 
 ]

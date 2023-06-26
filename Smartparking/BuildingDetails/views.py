@@ -106,3 +106,12 @@ class InsertSlots(APIView):
             slot.save()  # Save the slot object to the database
         logging.info("for loop ending")
         return Response(status=status.HTTP_201_CREATED)
+    
+class GettingAllSlots(GenericAPIView,CreateModelMixin,ListModelMixin):
+    queryset = SlotDetails.objects.all()
+    serializer_class = SlotSerializer
+    def get(self,request):
+        logging.info("From Floor Details GET method to retrive all objects")
+        return self.list(request)
+
+
