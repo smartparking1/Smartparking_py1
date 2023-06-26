@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Employee/',include('employee_authentication.urls')),
     path('building/',include('BuildingDetails.urls')),
+    path('vehicleparking/',include('Vehicalparkingapp.urls'))
 
 ]

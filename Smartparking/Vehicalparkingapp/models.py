@@ -5,7 +5,7 @@ from employee_authentication.models import *
 class VehicleParking(models.Model):
     vehicle_no = models.CharField(max_length=45)
     vehicle_type = models.CharField(max_length=45)
-    checkin_time = models.DateTimeField()
+    checkin_time = models.DateTimeField(blank=True, null=True)
     checkout_time = models.DateTimeField(blank=True, null=True)
     parking_amount = models.IntegerField(blank=True, null=True)
     fine_amount = models.IntegerField(blank=True, null=True)
