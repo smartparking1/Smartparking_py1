@@ -10,7 +10,7 @@ class BuildingSerializer(serializers.ModelSerializer) :
     class Meta :
         model = BuildingDetails
         fields = '__all__'
- 
+
 class FloorSerializer(serializers.ModelSerializer) :
     building = BuildingSerializer()
     class Meta :
@@ -52,3 +52,16 @@ class SlotSerializer(serializers.ModelSerializer):
         floor = FloorDetails.objects.create(building=building,**floor_data)
         slot = SlotDetails.objects.create(floor=floor,**floor_data)
         return slot
+    
+class SlotDetailsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SlotDetails
+        fields = '_all_'
+
+    def update(self, instance, validated_data):
+        # Update the fields of SlotDetails instance
+        instance.status = validated_data.get('status', instance.status)
+       
+        # Save the updated SlotDetails instance
+        instance.save()
+        return instance
