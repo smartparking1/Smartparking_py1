@@ -23,7 +23,7 @@ class InsertVehicleParking(GenericAPIView, CreateModelMixin):
         vehicleparking = serializer.data
          
         date = datetime.now().date()  # Get the current date
-        time = datetime.strptime("12:30:00", "%H:%M:%S").time()  # Define the desired time
+        time = datetime.now().time()  # Define the desired time
         combined_datetime = datetime.combine(date, time)
         
         vehicle_parking = VehicleParking()
@@ -54,20 +54,26 @@ class UpdateVehicleParking(APIView):
         serializer = VehicleParkingSerializer(data = request.data)
         serializer.is_valid()
         vehicleNo  = serializer.data
-        vehicleparkingdata = VehicleParking.objects.get(vehicle_no=vehicleNo.get('vehicle_no'))
-        date = datetime.now().date()  # Get the current date
-        time = datetime.strptime("12:30:00", "%H:%M:%S").time()  # Define the desired time
-        combined_datetime = datetime.combine(date, time)
-        vehicleparkingdata.checkout_time = combined_datetime
-
-        try:
-            vehicle = EmployeeDetails.objects.get(id=empId)
-            vehicleparkingdata.checkout_by = vehicle
-        except ObjectDoesNotExist:
-            return Response("Invalid check-in by ID", status=status.HTTP_400_BAD_REQUEST)
-        
-        vehicleparkingdata.save()
-        return Response("Saved successfully", status=status.HTTP_201_CREATED)
+        vehicleparkingdata = VehicleParking.objects.filter(vehicle_no=vehicleNo.get('vehicle_no'))
+        for vehicle_data in vehicleparkingdata:
+            if vehicle_data.checkout_time is None:
+                date = datetime.now().date()  # Get the current date
+                time = datetime.now().time()  # Get the current time
+                combined_datetime = datetime.combine(date, time)
+                vehicle_data.checkout_time = combined_datetime
+                try:
+                    vehicle = EmployeeDetails.objects.get(id=empId)
+                    vehicle_data.checkout_by = vehicle
+                except ObjectDoesNotExist:
+                    return Response("Invalid check-in by ID", status=status.HTTP_400_BAD_REQUEST)
+                vehicle_data.save()
+                
+            else:
+                print('not ok')
+        # vehicle_data = VehicleParking.objects.filter(vehicle_no=vehicleNo.get('vehicle_no'))
+        serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
+        serializer_data.is_valid()
+        return Response((serializer_data.data)[vehicleparkingdata.count()-1])
 
         
 class UpdateFineAmount(APIView):
@@ -75,8 +81,18 @@ class UpdateFineAmount(APIView):
         serializer = VehicleParkingSerializer(data = request.data)
         serializer.is_valid()
         vehicle_data = serializer.data
-        vehicleParking = VehicleParking.objects.get(vehicle_no = vehicle_data.get('vehicle_no'))
-        vehicleParking.fine_amount = vehicle_data.get('fine_amount')
-        vehicleParking.total_amount = vehicleParking.parking_amount + vehicleParking.fine_amount
-        vehicleParking.save()
+        vehicleParking = VehicleParking.objects.filter(vehicle_no = vehicle_data.get('vehicle_no'))
+        for vehicle_data in vehicleParking :
+            if vehicle_data.checkout_time is None :
+                vehicle_data.fine_amount = vehicle_data.get('fine_amount')
+                vehicle_data.total_amount = vehicle_data.parking_amount + vehicle_data.fine_amount
+                vehicle_data.save()
+
         return Response("Saved successfully", status=status.HTTP_201_CREATED)
+
+class GetAllVehicles(GenericAPIView,ListModelMixin) :
+    queryset = VehicleParking.objects.all()
+    serializer_class = VehicleParkingSerializer
+
+    def get(self,request) :
+        return self.list(request)
