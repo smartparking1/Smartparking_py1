@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'parking_management',
         'USER' : 'root',
-        'PASSWORD' : 'Aravind@9390',
+        'PASSWORD' :'Aravind@9390',
         'PORT' : '3306',
         'HOST' : 'localhost',
     }
