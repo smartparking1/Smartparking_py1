@@ -18,10 +18,13 @@ from django.urls import path,include
 import employee_authentication
 import BuildingDetails
 import Vehicalparkingapp
+from PdfGenarations.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('Employee/',include('employee_authentication.urls')),
     path('building/',include('BuildingDetails.urls')),
-    path('vehical/',include('Vehicalparkingapp.urls'))
+    path('vehical/',include('Vehicalparkingapp.urls')),
+    path('pdf/',GetVehicledetails.as_view(),name='payslip.pdf'),
+
 
 ]

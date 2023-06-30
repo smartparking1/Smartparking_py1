@@ -11,8 +11,6 @@ from rest_framework.views import APIView
 
 # Create your views here.
 
-
-
 class InsertVehicleParking(GenericAPIView, CreateModelMixin):
     queryset = VehicleParking.objects.all()
     serializer_class = VehicleParkingSerializer

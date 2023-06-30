@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'BuildingDetails',
     'Vehicalparkingapp',
+    'PdfGenarations',
     'corsheaders'
 ]
 
@@ -85,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'parking_management',
         'USER' : 'root',
-        'PASSWORD' : 'Aravind@9390',
+        'PASSWORD' : 'Thiru@123',
         'PORT' : '3306',
         'HOST' : 'localhost',
     }
