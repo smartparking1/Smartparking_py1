@@ -8,6 +8,8 @@ from datetime import datetime
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.views import APIView
+from .exception import *
+import math
 
 # Create your views here.
 
@@ -59,19 +61,28 @@ class UpdateVehicleParking(APIView):
                 time = datetime.now().time()  # Get the current time
                 combined_datetime = datetime.combine(date, time)
                 vehicle_data.checkout_time = combined_datetime
+                if (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour) > 0:
+                    time_difference = (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour)+((vehicle_data.checkout_time.time().minute-vehicle_data.checkin_time.time().minute)/100)
+                    print(math.ceil(time_difference))
+                    vehicle_data.total_amount = vehicle_data.total_amount*math.ceil(time_difference)
+                else :
+                    vehicle_data.total_amount = vehicle_data.total_amount
                 try:
                     vehicle = EmployeeDetails.objects.get(id=empId)
                     vehicle_data.checkout_by = vehicle
                 except ObjectDoesNotExist:
                     return Response("Invalid check-in by ID", status=status.HTTP_400_BAD_REQUEST)
                 vehicle_data.save()
+                serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
+                serializer_data.is_valid()
+                return Response((serializer_data.data)[vehicleparkingdata.count()-1])
                 
-            else:
-                print('not ok')
+            # else:
+            #     raise VehicleNotFound("Vehicle not found")
         # vehicle_data = VehicleParking.objects.filter(vehicle_no=vehicleNo.get('vehicle_no'))
-        serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
-        serializer_data.is_valid()
-        return Response((serializer_data.data)[vehicleparkingdata.count()-1])
+        # serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
+        # serializer_data.is_valid()
+        # return Response((serializer_data.data)[vehicleparkingdata.count()-1])
 
         
 class UpdateFineAmount(APIView):
@@ -80,11 +91,14 @@ class UpdateFineAmount(APIView):
         serializer.is_valid()
         vehicle_data = serializer.data
         vehicleParking = VehicleParking.objects.filter(vehicle_no = vehicle_data.get('vehicle_no'))
-        for vehicle_data in vehicleParking :
-            if vehicle_data.checkout_time is None :
-                vehicle_data.fine_amount = vehicle_data.get('fine_amount')
-                vehicle_data.total_amount = vehicle_data.parking_amount + vehicle_data.fine_amount
-                vehicle_data.save()
+        for vehicledata in vehicleParking :
+            if vehicledata.checkout_time is None :
+                vehicledata.fine_amount = vehicle_data.get('fine_amount')
+                vehicledata.total_amount = vehicledata.parking_amount + vehicledata.fine_amount
+                vehicledata.save()
+                serializer_data = VehicleParkingSerializer(data=vehicleParking,many=True)
+                serializer_data.is_valid()
+                return Response((serializer_data.data)[vehicleParking.count()-1])
 
         return Response("Saved successfully", status=status.HTTP_201_CREATED)
 

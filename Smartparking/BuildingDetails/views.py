@@ -15,7 +15,7 @@ class addingBuilding(GenericAPIView,CreateModelMixin,ListModelMixin) :
     def post(self,request) :
         authorization_header = request.headers.get('Authorization')
         if checkingAuthentication(authorization_header):
-            logging.info("From Building Details POST method")
+            logging.error("From Building Details POST method")
             return self.create(request)
         else:
              raise AuthenticationFailed("somthing went wrong")
