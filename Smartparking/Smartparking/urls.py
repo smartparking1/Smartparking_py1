@@ -23,8 +23,12 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Employee/',include('employee_authentication.urls')),
     path('building/',include('BuildingDetails.urls')),
-    path('vehical/',include('Vehicalparkingapp.urls')),
+
+
     path('pdf/',GetVehicledetails.as_view(),name='payslip.pdf'),
+
+
+    path('vehicleparking/',include('Vehicalparkingapp.urls'))
 
 
 ]
