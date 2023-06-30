@@ -1,10 +1,6 @@
 from .models import *
 from rest_framework import serializers
 
-# class EmployeeSerializer(serializers.ModelSerializer) :
-#     class Meta :
-#         model = EmployeeDetails
-#         fields = '__all__'
 
 class BuildingSerializer(serializers.ModelSerializer) :
     class Meta :
