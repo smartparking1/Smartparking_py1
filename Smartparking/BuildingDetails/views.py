@@ -6,6 +6,7 @@ from rest_framework.generics import GenericAPIView
 from rest_framework.mixins import *
 from .service import *
 from rest_framework.views import APIView
+from .exception import *
 
 
 # Create your views here.
@@ -57,14 +58,30 @@ class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin)
     queryset = FloorDetails.objects.all()
     serializer_class = FloorSerializer
     def post(self,request):
-        logging.info("From Floor Details POST method")
-        return self.create(request)
+        building_name = request.data.get('building')
+        building_data = BuildingDetails.objects.get(building_name=building_name)
+        listOfFloors = FloorDetails.objects.filter(building = building_data.building_id)
+        count = 0 
+        if len(listOfFloors) < int(building_data.no_of_floors):
+            print(listOfFloors)
+            for floor in listOfFloors:
+                print(floor.floor_no != request.data.get('floor_no'))
+                if floor.floor_no != request.data.get('floor_no'):
+                    # request.data['building'] = building_data.building_id
+                    # logging.info("From Floor Details POST method")
+                    # return self.create(request)
+                    count+=1;
+            if(count == len(listOfFloors)):
+                request.data['building'] = building_data.building_id
+                logging.info("From Floor Details POST method")
+                return self.create(request)
+            return Response("saved sucessfully",status=status.HTTP_200_OK)
+           
+        else :
+            raise FloorRequirementSatisfiedException("Floors are equal to no.of floors in building")
     def get(self,request) :
         logging.info("From Floor Details GET method to retrive all objects")
         return self.list(request)
-
-
-
 
 class UpdateFloor(GenericAPIView,UpdateModelMixin):
     queryset = FloorDetails.objects.all()
