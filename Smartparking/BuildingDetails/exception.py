@@ -1,0 +1,2 @@
+class FloorRequirementSatisfiedException(Exception):
+    pass
