@@ -59,22 +59,22 @@ class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin)
     serializer_class = FloorSerializer
     def post(self,request):
         building_name = request.data.get('building')
-        building_data = BuildingDetails.objects.get(building_name=building_name)
+        location = request.data.get('location')
+        building_data = BuildingDetails.objects.get(building_name=building_name , location=location)
         listOfFloors = FloorDetails.objects.filter(building = building_data.building_id)
         count = 0 
-        if len(listOfFloors) < int(building_data.no_of_floors):
-            print(listOfFloors)
+        if len(listOfFloors) < int(building_data.no_of_floors) and building_data.building_id:
             for floor in listOfFloors:
-                print(floor.floor_no != request.data.get('floor_no'))
                 if floor.floor_no != request.data.get('floor_no'):
-                    # request.data['building'] = building_data.building_id
-                    # logging.info("From Floor Details POST method")
-                    # return self.create(request)
                     count+=1;
             if(count == len(listOfFloors)):
                 request.data['building'] = building_data.building_id
                 logging.info("From Floor Details POST method")
-                return self.create(request)
+                floordata =  self.create(request)
+                slot = InsertSlots()
+                slot.post(floordata.data['floor_id'])
+                return floordata
+                # slot.post(floordata.get('floor_id'))
             return Response("saved sucessfully",status=status.HTTP_200_OK)
            
         else :
@@ -148,13 +148,13 @@ class SlotUpdate(GenericAPIView, UpdateModelMixin):
 
 
 class InsertSlots(APIView):
-    def post(self, request, id):
+    def post(self,id):
         logging.info("From Building Details POST method")
         floor_details = FloorDetails.objects.get(floor_id=id)
         logging.info("for loop starting")
         for i in range(1, floor_details.no_of_slots+1):
             slot = SlotDetails()
-            slot.slot_name = floor_details.floor_no + 's' + str(i)
+            slot.slot_name = floor_details.floor_no + '-S' + str(i)
             slot.status = 'active'
             slot.floor = floor_details
             slot.save()  # Save the slot object to the database
