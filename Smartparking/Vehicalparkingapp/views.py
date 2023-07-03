@@ -50,11 +50,11 @@ class InsertVehicleParking(GenericAPIView, CreateModelMixin):
         return Response("Saved successfully", status=status.HTTP_201_CREATED)
     
 class UpdateVehicleParking(APIView):
-    def put(self,request,empId) :
+    def put(self,request,empId,vehicle_no) :
         serializer = VehicleParkingSerializer(data = request.data)
         serializer.is_valid()
         vehicleNo  = serializer.data
-        vehicleparkingdata = VehicleParking.objects.filter(vehicle_no=vehicleNo.get('vehicle_no'))
+        vehicleparkingdata = VehicleParking.objects.filter(vehicle_no=vehicle_no)
         for vehicle_data in vehicleparkingdata:
             if vehicle_data.checkout_time is None:
                 date = datetime.now().date()  # Get the current date
