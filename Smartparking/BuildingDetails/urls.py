@@ -10,7 +10,8 @@ urlpatterns = [
     path('DeleteFloorsAndGettingParticularfloor/<int:pk>/',DeleteFloorsAndGettingParticularfloor.as_view(),name='DeleteFloorsAndGettingParticularfloor'),
     path('insertslot/<int:id>/',InsertSlots.as_view(),name='insertslot'),
     path('buildinginactiveandactive/<int:id>/',BuildingInactiveAndactive.as_view(),name = 'buildinginactive'),
-    path('SlotUpdate/<int:pk>/',SlotUpdate.as_view(),name='SlotUpdate'),
+    path('SlotUpdate/<int:slot_id>/<str:slot_status>/',SlotUpdate.as_view(),name='SlotUpdate'),
     path('FloorActiveAndInactive/<int:id>/',FloorActiveAndInactive.as_view(),name='FloorActiveAndInactive'),
+    path('gettingallslots/',GettingAllSlots.as_view(),name='gettingallslots')
 
 ]
