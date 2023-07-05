@@ -129,22 +129,41 @@ class FloorActiveAndInactive(APIView):
         logging.info("for loop ending")
         return Response(status=status.HTTP_201_CREATED)
     
-class SlotUpdate(GenericAPIView, UpdateModelMixin):
+# class SlotUpdate(GenericAPIView, UpdateModelMixin):
+#     queryset = SlotDetails.objects.all()
+#     serializer_class = SlotDetailsSerializer
+
+#     def put(self, request, *args, **kwargs):
+#         return self.update(request, *args, **kwargs)
+
+#     def update(self, request, *args, **kwargs):
+#         instance = self.get_object()
+#         serializer = self.get_serializer(instance, data=request.data, partial=True)
+#         serializer.is_valid(raise_exception=True)
+#         self.perform_update(serializer)
+#         return Response(serializer.data)
+
+#     def perform_update(self, serializer):
+#         logging.error("========================")
+#         logging.error(serializer)
+#         serializer.save()
+
+# class SlotUpdate(GenericAPIView,UpdateModelMixin) :
+#     queryset = SlotDetails.objects.all()
+#     serializer_class = SlotDetailsSerializer
+#     def put(self,request,**kwargs):
+#         print("okkkkkkkkkkkkkkkkkkkk")
+#         return self.update(request,**kwargs)
+
+class SlotUpdate(APIView) :
     queryset = SlotDetails.objects.all()
     serializer_class = SlotDetailsSerializer
+    def put(self,request,slot_id,slot_status):
+        slot = SlotDetails.objects.get(slot_id = slot_id)
+        slot.status = slot_status
+        slot.save()
+        return Response("Updated Sucessfully",status=status.HTTP_201_CREATED)
 
-    def put(self, request, *args, **kwargs):
-        return self.update(request, *args, **kwargs)
-
-    def update(self, request, *args, **kwargs):
-        instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=True)
-        serializer.is_valid(raise_exception=True)
-        self.perform_update(serializer)
-        return Response(serializer.data)
-
-    def perform_update(self, serializer):
-        serializer.save()
 
 
 class InsertSlots(APIView):
@@ -160,6 +179,12 @@ class InsertSlots(APIView):
             slot.save()  # Save the slot object to the database
         logging.info("for loop ending")
         return Response(status=status.HTTP_201_CREATED)
+    
+class GettingAllSlots(GenericAPIView,ListModelMixin):
+    queryset = SlotDetails.objects.all()
+    serializer_class = SlotDetailsSerializer
+    def get(self,request):
+        return self.list(request)
     
 class BuildingInactiveAndactive(APIView) :
     def put(self,request,id):
@@ -188,6 +213,7 @@ class BuildingInactiveAndactive(APIView) :
                     slot_details = SlotDetails.objects.filter(floor_id=floor['floor_id'])
                     slot_details.update(status = active) 
         return Response(status=status.HTTP_201_CREATED)
+    
     
 
                 

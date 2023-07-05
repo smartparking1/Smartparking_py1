@@ -52,7 +52,7 @@ class SlotSerializer(serializers.ModelSerializer):
 class SlotDetailsSerializer(serializers.ModelSerializer):
     class Meta:
         model = SlotDetails
-        fields = '_all_'
+        fields = '__all__'
 
     def update(self, instance, validated_data):
         # Update the fields of SlotDetails instance

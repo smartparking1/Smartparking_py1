@@ -83,7 +83,7 @@ class UpdateVehicleParking(APIView):
         # serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
         # serializer_data.is_valid()
         # return Response((serializer_data.data)[vehicleparkingdata.count()-1])
-
+        
         
 class UpdateFineAmount(APIView):
     def put(self,request):
