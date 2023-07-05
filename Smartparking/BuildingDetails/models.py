@@ -7,6 +7,8 @@ class BuildingDetails(models.Model):
     location = models.CharField(max_length=45)
     status = models.CharField(max_length=45)
     no_of_floors = models.CharField(max_length=45)
+    images = models.ImageField(upload_to='images/',default='')
+
 
     class Meta:
         managed = False
