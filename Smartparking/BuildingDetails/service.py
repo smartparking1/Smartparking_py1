@@ -22,7 +22,7 @@ def checkingAuthentication(authorization_header):
                  raise AuthenticationFailed("Authentication expired")
             except :
                  raise AuthenticationFailed("Token not found")
-            if current_employeeRole!='admin':
-                    raise AuthenticationFailed("You are unauthorized to perform this action.")
+        #     if current_employeeRole!='admin':
+        #             raise AuthenticationFailed("You are unauthorized to perform this action.")
             return True
                     

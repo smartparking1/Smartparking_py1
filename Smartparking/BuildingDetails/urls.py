@@ -14,3 +14,4 @@ urlpatterns = [
     path('FloorActiveAndInactive/<int:id>/',FloorActiveAndInactive.as_view(),name='FloorActiveAndInactive'),
 
 ]
+
