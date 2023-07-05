@@ -7,35 +7,31 @@ from rest_framework.mixins import *
 from .service import *
 from rest_framework.views import APIView
 from .exception import *
-from rest_framework.request import Request
-from rest_framework import generics
 
 
 # Create your views here.
-class addingBuilding(GenericAPIView, CreateModelMixin):
+class addingBuilding(GenericAPIView,CreateModelMixin,ListModelMixin) :
     queryset = BuildingDetails.objects.all()
     serializer_class = BuildingSerializer
-     
-    def post(self, request):
-        logging.error("in views_________________")
-        logging.error(request.FILES)
+    def post(self,request) :
         authorization_header = request.headers.get('Authorization')
         if checkingAuthentication(authorization_header):
             logging.error("From Building Details POST method")
             return self.create(request)
         else:
-            raise AuthenticationFailed("Something went wrong")
+             raise AuthenticationFailed("somthing went wrong")
+ 
 
+
+    
 class GettingAllBuildings(GenericAPIView,ListModelMixin):
         queryset = BuildingDetails.objects.all()
-       
         serializer_class = BuildingSerializer
         def get(self,request) :
             authorization_header = request.headers.get('Authorization')
             if checkingAuthentication(authorization_header):
-                logging.error("From Building Details get method")
-                logging.error("From Building Details GET method to retrive all objects")
-                # logging.error(self.list(request))
+                logging.info("From Building Details get method")
+                logging.info("From Building Details GET method to retrive all objects")
                 return self.list(request)
             
 
@@ -43,7 +39,7 @@ class GettingAllBuildings(GenericAPIView,ListModelMixin):
 
 class UpdateBuildingAndDeleteBuildingGettingParticularBuilding(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin) :
     queryset = BuildingDetails.objects.all()
-    serializer_class =BuildingSerializer
+    serializer_class = BuildingSerializer
     def put(self,request,**kwargs):
         logging.info("From Building Details PUT method")
         return self.update(request,**kwargs)
@@ -53,19 +49,7 @@ class UpdateBuildingAndDeleteBuildingGettingParticularBuilding(GenericAPIView,De
     def get(self,request,**kwargs):
         logging.info("From Building Details GET method to get specific data")
         return self.retrieve(request,**kwargs)
-    def patch(self, request, *args, **kwargs):
-        partial = kwargs.pop('partial', True)
-        instance = self.get_object()
-        logging.error("_____________________________________________________________________________________")
-        logging.error(instance)
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
-        serializer.is_valid(raise_exception=True)
-        self.perform_update(serializer)
-        return Response(serializer.data, status=status.HTTP_200_OK)
 
-# class BuildingDetailsView(generics.RetrieveUpdateAPIView):
-#     queryset = BuildingDetails.objects.all()
-#     serializer_class = BuildingSerializer
 
 
 
