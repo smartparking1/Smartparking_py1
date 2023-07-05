@@ -1,11 +1,14 @@
 from .models import *
 from rest_framework import serializers
+from django.core.files.images import get_image_dimensions
+from django.utils.encoding import smart_str
+from django.conf import settings
+import logging
 
-
-class BuildingSerializer(serializers.ModelSerializer) :
-    class Meta :
-        model = BuildingDetails
-        fields = '__all__'
+# class BuildingSerializer(serializers.ModelSerializer) :
+#     class Meta :
+#         model = BuildingDetails
+#         fields = '__all__'
 
 class FloorSerializer(serializers.ModelSerializer) :
     # building = BuildingSerializer()
@@ -61,3 +64,40 @@ class SlotDetailsSerializer(serializers.ModelSerializer):
         # Save the updated SlotDetails instance
         instance.save()
         return instance
+    
+
+
+#* building serilizers
+
+class BuildingSerializer(serializers.ModelSerializer):
+    images = serializers.ImageField(write_only=True)
+    image_url = serializers.SerializerMethodField(read_only=True)
+
+    class Meta:
+        model = BuildingDetails
+        fields = ['building_id', 'building_name', 'location', 'status', 'images', 'no_of_floors', 'image_url']
+
+    def validate_images(self, value):
+        if value:
+            w, h = get_image_dimensions(value)
+            if w > 3000 or h > 3000:
+                raise serializers.ValidationError("The image dimensions should not exceed 1920x1080 pixels.")
+        return value
+
+    def get_image_url(self, obj):
+        logging.error("+++++++++++++++++++")
+        logging.error(obj)
+        if obj.images:
+            image_path = smart_str(obj.images)
+            return self.context['request'].build_absolute_uri(settings.MEDIA_URL + image_path)
+        return None
+
+    def create(self, validated_data):
+        image = validated_data.pop('images', None)
+        building = BuildingDetails.objects.create(**validated_data)
+
+        if image:
+            building.images = image
+            building.save()
+
+        return building
