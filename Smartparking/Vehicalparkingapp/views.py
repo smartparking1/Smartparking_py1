@@ -64,7 +64,7 @@ class UpdateVehicleParking(APIView):
                 if (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour) > 0:
                     time_difference = (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour)+((vehicle_data.checkout_time.time().minute-vehicle_data.checkin_time.time().minute)/100)
                     print(math.ceil(time_difference))
-                    vehicle_data.total_amount = vehicle_data.total_amount*math.ceil(time_difference)
+                    vehicle_data.total_amount = vehicle_data.fine_amount+vehicle_data.parking_amount*math.ceil(time_difference)
                 else :
                     vehicle_data.total_amount = vehicle_data.total_amount
                 try:
@@ -77,13 +77,6 @@ class UpdateVehicleParking(APIView):
                 serializer_data.is_valid()
                 return Response((serializer_data.data)[vehicleparkingdata.count()-1])
                 
-            # else:
-            #     raise VehicleNotFound("Vehicle not found")
-        # vehicle_data = VehicleParking.objects.filter(vehicle_no=vehicleNo.get('vehicle_no'))
-        # serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
-        # serializer_data.is_valid()
-        # return Response((serializer_data.data)[vehicleparkingdata.count()-1])
-        
         
 class UpdateFineAmount(APIView):
     def put(self,request):

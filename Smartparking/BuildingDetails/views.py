@@ -49,6 +49,15 @@ class UpdateBuildingAndDeleteBuildingGettingParticularBuilding(GenericAPIView,De
     def get(self,request,**kwargs):
         logging.info("From Building Details GET method to get specific data")
         return self.retrieve(request,**kwargs)
+    def patch(self, request, *args, **kwargs):
+        partial = kwargs.pop('partial', True)
+        instance = self.get_object()
+        logging.error("_____________________________________________________________________________________")
+        logging.error(instance)
+        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        serializer.is_valid(raise_exception=True)
+        self.perform_update(serializer)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 

@@ -81,7 +81,7 @@ class BuildingSerializer(serializers.ModelSerializer):
         if value:
             w, h = get_image_dimensions(value)
             if w > 3000 or h > 3000:
-                raise serializers.ValidationError("The image dimensions should not exceed 1920x1080 pixels.")
+                raise serializers.ValidationError("The image dimensions should not exceed 3000 pixels.")
         return value
 
     def get_image_url(self, obj):
