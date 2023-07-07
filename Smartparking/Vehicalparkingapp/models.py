@@ -20,3 +20,14 @@ class VehicleParking(models.Model):
     class Meta:
         managed = False
         db_table = 'vehicle_parking'
+
+class Prices(models.Model):
+    id=models.AutoField(primary_key=True)
+    building = models.ForeignKey(BuildingDetails, models.DO_NOTHING)
+    day_type = models.CharField(max_length=45, blank=True, null=True)
+    vehicle_type = models.CharField(max_length=45, blank=True, null=True)
+    price = models.CharField(max_length=45, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'prices'

@@ -17,6 +17,7 @@ from .service_of_empoyee import sending_jsonObject
 class EmployeeRegister(GenericAPIView,CreateModelMixin):
     serializer_class=EmployeeSerializer
     queryset=EmployeeDetails.objects.all()
+
     @csrf_exempt
     def post(self,request):
         return self.create(request)
@@ -29,8 +30,9 @@ class EmployeeLogin(APIView):
     def post(self,request):        
         email=request.data['email_id']
         password=request.data['password']
+
         employee=EmployeeDetails.objects.filter(email_id=email)
-        # obj= sending_jsonObject(employee)
+        
         serializer=EmployeeSerializer(data=employee,many=True)
         serializer.is_valid()
         x=((serializer.data))
@@ -42,24 +44,21 @@ class EmployeeLogin(APIView):
         if not employee.check_password(password):
             raise AuthenticationFailed("Invalid Password")
 
-        
         payload ={
             'id':employee.email_id,
             'role':employee.role,
-            'exp':datetime.datetime.utcnow()+datetime.timedelta(minutes=20000),
+            'exp':datetime.datetime.utcnow()+datetime.timedelta(minutes=10),
             'iat':datetime.datetime.utcnow()
         }
 
         #* creating JWT token by using algorithm HS256
+
         tocken=jwt.encode(payload,'secret',algorithm='HS256')
         responce =Response()
-        print('ok')
         responce.data={
                 'jwt':tocken,
                 'user':x[0]
-                
-     
-            }
+                }
         responce.set_cookie(key='jwt',value=tocken,httponly=True)
         print(responce)
         return responce
@@ -68,21 +67,21 @@ class EmployeeLogin(APIView):
 class GettingAllEmployeeList(APIView):
     def get(self,request):
         authorization_header = request.headers.get('Authorization')
+        
+
         if not authorization_header:
             raise AuthenticationFailed("Unauthenticated")
-
         try:
             token = authorization_header.split(' ')[1]
             payload = jwt.decode(token, 'secret', algorithms=['HS256'])
             print(payload)
             currentuser=payload.get('id')
-            print(currentuser)
-    
+           
         except jwt.ExpiredSignatureError:
             raise AuthenticationFailed("Authentication expired")
-        except :
+        except authorization_header is None :
             raise AuthenticationFailed("Token not found")
-            
+        
         employeesList = EmployeeDetails.objects.all()
         serializer = EmployeeSerializer(employeesList, many=True)
         return Response(serializer.data)

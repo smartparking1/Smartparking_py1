@@ -7,15 +7,17 @@ from rest_framework.mixins import *
 from .service import *
 from rest_framework.views import APIView
 from .exception import *
+from django.http import JsonResponse    
+from django.core.exceptions import ObjectDoesNotExist
 
 
-# Create your views here.
+
 class addingBuilding(GenericAPIView,CreateModelMixin,ListModelMixin) :
     queryset = BuildingDetails.objects.all()
     serializer_class = BuildingSerializer
     def post(self,request) :
         authorization_header = request.headers.get('Authorization')
-        if checkingAuthentication(authorization_header):
+        if checkingAuthenticationForAdmin(authorization_header):
             logging.error("From Building Details POST method")
             return self.create(request)
         else:
@@ -29,26 +31,34 @@ class GettingAllBuildings(GenericAPIView,ListModelMixin):
         serializer_class = BuildingSerializer
         def get(self,request) :
             authorization_header = request.headers.get('Authorization')
-            if checkingAuthentication(authorization_header):
+            if checkingAuthenticationForEmployee(authorization_header):
                 logging.info("From Building Details get method")
                 logging.info("From Building Details GET method to retrive all objects")
                 return self.list(request)
             
 
 
-
 class UpdateBuildingAndDeleteBuildingGettingParticularBuilding(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin) :
     queryset = BuildingDetails.objects.all()
     serializer_class = BuildingSerializer
+
     def put(self,request,**kwargs):
-        logging.info("From Building Details PUT method")
-        return self.update(request,**kwargs)
+        authorization_header = request.headers.get('Authorization')
+        if checkingAuthenticationForEmployee(authorization_header):
+            logging.info("From Building Details PUT method")
+            return self.update(request,**kwargs)
+        
+
     def delete(self,request,**kwargs):
-        logging.info("From Building Details DELETE method")
-        return self.destroy(request,**kwargs)
+        authorization_header = request.headers.get('Authorization')
+        if checkingAuthenticationForEmployee(authorization_header):
+            logging.info("From Building Details DELETE method")
+            return self.destroy(request,**kwargs)
     def get(self,request,**kwargs):
-        logging.info("From Building Details GET method to get specific data")
-        return self.retrieve(request,**kwargs)
+        authorization_header = request.headers.get('Authorization')
+        if checkingAuthenticationForEmployee(authorization_header):
+            logging.info("From Building Details GET method to get specific data")
+            return self.retrieve(request,**kwargs)
 
 
 
@@ -60,7 +70,7 @@ class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin)
     def post(self,request):
         building_name = request.data.get('building')
         location = request.data.get('location')
-        building_data = BuildingDetails.objects.get(building_name=building_name , location=location)
+        building_data = BuildingDetails.objects.filter(building_name=building_name , location=location).first()
         listOfFloors = FloorDetails.objects.filter(building = building_data.building_id)
         count = 0 
         if len(listOfFloors) < int(building_data.no_of_floors) and building_data.building_id:
@@ -74,13 +84,17 @@ class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin)
                 slot = InsertSlots()
                 slot.post(floordata.data['floor_id'])
                 return floordata
-                # slot.post(floordata.get('floor_id'))
             return Response("saved sucessfully",status=status.HTTP_200_OK)
            
         else :
-            raise FloorRequirementSatisfiedException("Floors are equal to no.of floors in building")
+            try:
+                raise FloorRequirementSatisfiedException("All Floors alredy added in ur Buildng😊😊")
+            except FloorRequirementSatisfiedException as e:
+                return JsonResponse({'error': str(e)}, status=400)
+        
     def get(self,request) :
         logging.info("From Floor Details GET method to retrive all objects")
+
         return self.list(request)
 
 class UpdateFloor(GenericAPIView,UpdateModelMixin):
@@ -89,7 +103,6 @@ class UpdateFloor(GenericAPIView,UpdateModelMixin):
     def put(self,request,**kwargs):
         logging.info("From Floor Details PUT method")
         return self.update(request,**kwargs)
-
 
 
 
@@ -127,43 +140,22 @@ class FloorActiveAndInactive(APIView):
                   slot.status = "active"
                   slot.save()
         logging.info("for loop ending")
+
         return Response(status=status.HTTP_201_CREATED)
     
-# class SlotUpdate(GenericAPIView, UpdateModelMixin):
-#     queryset = SlotDetails.objects.all()
-#     serializer_class = SlotDetailsSerializer
-
-#     def put(self, request, *args, **kwargs):
-#         return self.update(request, *args, **kwargs)
-
-#     def update(self, request, *args, **kwargs):
-#         instance = self.get_object()
-#         serializer = self.get_serializer(instance, data=request.data, partial=True)
-#         serializer.is_valid(raise_exception=True)
-#         self.perform_update(serializer)
-#         return Response(serializer.data)
-
-#     def perform_update(self, serializer):
-#         logging.error("========================")
-#         logging.error(serializer)
-#         serializer.save()
-
-# class SlotUpdate(GenericAPIView,UpdateModelMixin) :
-#     queryset = SlotDetails.objects.all()
-#     serializer_class = SlotDetailsSerializer
-#     def put(self,request,**kwargs):
-#         print("okkkkkkkkkkkkkkkkkkkk")
-#         return self.update(request,**kwargs)
-
+    
 class SlotUpdate(APIView) :
     queryset = SlotDetails.objects.all()
     serializer_class = SlotDetailsSerializer
     def put(self,request,slot_id,slot_status):
-        slot = SlotDetails.objects.get(slot_id = slot_id)
-        slot.status = slot_status
-        slot.save()
-        return Response("Updated Sucessfully",status=status.HTTP_201_CREATED)
+        try:
+            slot = SlotDetails.objects.get(slot_id = slot_id)
 
+            slot.status = slot_status
+            slot.save()
+            return Response("Updated Sucessfully",status=status.HTTP_201_CREATED)
+        except ObjectDoesNotExist as e:
+            return JsonResponse({'error': str(e)}, status=400)
 
 
 class InsertSlots(APIView):
@@ -179,13 +171,15 @@ class InsertSlots(APIView):
             slot.save()  # Save the slot object to the database
         logging.info("for loop ending")
         return Response(status=status.HTTP_201_CREATED)
-    
+
+
 class GettingAllSlots(GenericAPIView,ListModelMixin):
     queryset = SlotDetails.objects.all()
     serializer_class = SlotDetailsSerializer
     def get(self,request):
         return self.list(request)
-    
+
+
 class BuildingInactiveAndactive(APIView) :
     def put(self,request,id):
         building_details = BuildingDetails.objects.get(building_id=id)

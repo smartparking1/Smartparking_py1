@@ -4,14 +4,17 @@ from rest_framework.mixins import CreateModelMixin,ListModelMixin,UpdateModelMix
 from .serializer import *
 from .models import *
 from rest_framework.response import Response
-from datetime import datetime
 from rest_framework import status
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.views import APIView
 from .exception import *
 import math
+from .service import *
+import datetime
+from django.http import JsonResponse
 
-# Create your views here.
+
+
 
 class InsertVehicleParking(GenericAPIView, CreateModelMixin):
     queryset = VehicleParking.objects.all()
@@ -22,27 +25,29 @@ class InsertVehicleParking(GenericAPIView, CreateModelMixin):
         serializer.is_valid()
         vehicleparking = serializer.data
          
-        date = datetime.now().date()  # Get the current date
-        time = datetime.now().time()  # Define the desired time
-        combined_datetime = datetime.combine(date, time)
+        date = datetime.datetime.now().date()  # Get the current date
+        time = datetime.datetime.now().time()  # Define the desired time
+        combined_datetime = datetime.datetime.combine(date, time)
         
         vehicle_parking = VehicleParking()
         vehicle_parking.vehicle_no = vehicleparking.get('vehicle_no')
         vehicle_parking.vehicle_type = vehicleparking.get('vehicle_type')
         vehicle_parking.checkin_time = combined_datetime
-        vehicle_parking.parking_amount = vehicleparking.get('parking_amount')
+        vehicle_parking.parking_amount = int( gettingpriceByslotId(vehicleparking.get('slot'),vehicle_parking.vehicle_type))
+       
         vehicle_parking.fine_amount = vehicleparking.get('fine_amount')
         vehicle_parking.total_amount = vehicle_parking.parking_amount + vehicle_parking.fine_amount
-        
+        checkingCar(vehicle_parking.vehicle_no)
         try:
             slot = SlotDetails.objects.get(slot_id=vehicleparking.get('slot'))
             vehicle_parking.slot = slot
         except ObjectDoesNotExist:
+            
             return Response("Invalid slot ID", status=status.HTTP_400_BAD_REQUEST)
-        
         try:
-            vehicle = EmployeeDetails.objects.get(id=vehicleparking.get('checkin_by'))
-            vehicle_parking.checkin_by = vehicle
+            employee = EmployeeDetails.objects.get(id=vehicleparking.get('checkin_by'))
+            vehicle_parking.checkin_by = employee
+        
         except ObjectDoesNotExist:
             return Response("Invalid check-in by ID", status=status.HTTP_400_BAD_REQUEST)
         
@@ -54,35 +59,39 @@ class UpdateVehicleParking(APIView):
         serializer = VehicleParkingSerializer(data = request.data)
         serializer.is_valid()
         vehicleNo  = serializer.data
-        vehicleparkingdata = VehicleParking.objects.filter(vehicle_no=vehicle_no)
-        for vehicle_data in vehicleparkingdata:
-            if vehicle_data.checkout_time is None:
-                date = datetime.now().date()  # Get the current date
-                time = datetime.now().time()  # Get the current time
-                combined_datetime = datetime.combine(date, time)
-                vehicle_data.checkout_time = combined_datetime
-                if (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour) > 0:
-                    time_difference = (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour)+((vehicle_data.checkout_time.time().minute-vehicle_data.checkin_time.time().minute)/100)
-                    print(math.ceil(time_difference))
-                    vehicle_data.total_amount = vehicle_data.total_amount*math.ceil(time_difference)
-                else :
-                    vehicle_data.total_amount = vehicle_data.total_amount
-                try:
-                    vehicle = EmployeeDetails.objects.get(id=empId)
-                    vehicle_data.checkout_by = vehicle
-                except ObjectDoesNotExist:
-                    return Response("Invalid check-in by ID", status=status.HTTP_400_BAD_REQUEST)
-                vehicle_data.save()
-                serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
-                serializer_data.is_valid()
-                return Response((serializer_data.data)[vehicleparkingdata.count()-1])
-                
-            # else:
-            #     raise VehicleNotFound("Vehicle not found")
-        # vehicle_data = VehicleParking.objects.filter(vehicle_no=vehicleNo.get('vehicle_no'))
-        # serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
-        # serializer_data.is_valid()
-        # return Response((serializer_data.data)[vehicleparkingdata.count()-1])
+        vehicleparkingdata = VehicleParking.objects.filter(vehicle_no=vehicle_no,checkout_time=None)
+        print(vehicleparkingdata,'-------------------------------')
+        try:
+            if(len(vehicleparkingdata)==0):
+                raise VehicleNotFound('Please enter the currect details')
+            else:
+                for vehicle_data in vehicleparkingdata:
+                    if vehicle_data.checkout_time is None:
+                        date = datetime.datetime.now().date()  # Get the current date
+                        time = datetime.datetime.now().time()  # Get the current time
+                        combined_datetime = datetime.datetime.combine(date, time)
+                        vehicle_data.checkout_time = combined_datetime
+                        if (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour) > 0:
+                            time_difference = (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour)+((vehicle_data.checkout_time.time().minute-vehicle_data.checkin_time.time().minute)/100)
+                            print(math.ceil(time_difference))
+                            vehicle_data.total_amount = vehicle_data.total_amount*math.ceil(time_difference)
+                        else :
+                            vehicle_data.total_amount = vehicle_data.total_amount
+                        try:
+                            employee = EmployeeDetails.objects.get(id=empId)
+                            vehicle_data.checkout_by = employee
+                        except ObjectDoesNotExist:
+                            return Response("Invalid check-in by ID", status=status.HTTP_400_BAD_REQUEST)
+                        vehicle_data.save()
+                        serializer_data = VehicleParkingSerializer(data=vehicleparkingdata,many=True)
+                        serializer_data.is_valid()
+                        return Response((serializer_data.data)[vehicleparkingdata.count()-1])
+                        
+                else:
+                    raise VehicleNotFound("Vehicle not found")
+        except VehicleNotFound as v:
+            return JsonResponse({'error': str(v)}, status=400)
+
         
         
 class UpdateFineAmount(APIView):
@@ -106,5 +115,34 @@ class GetAllVehicles(GenericAPIView,ListModelMixin) :
     queryset = VehicleParking.objects.all()
     serializer_class = VehicleParkingSerializer
 
-    def get(self,request) :
+    def get(self,request) :      
         return self.list(request)
+    
+
+
+#* price modifications
+
+class PriceInsert(GenericAPIView,CreateModelMixin):
+    queryset=Prices.objects.all()
+    serializer_class=Priceserializer
+    def post(self,request):
+        print(request.data)
+        return self.create(request)
+    
+
+class PriceGetting(GenericAPIView,ListModelMixin):
+    queryset=Prices.objects.all()
+    serializer_class=Priceserializer
+
+    def get(self,request) :      
+        return self.list(request)
+        
+
+class PriceUpadate(APIView):
+    def put(self,request,id):
+        price = Prices.objects.get(id=id)
+        print(price)
+        serializer=Priceserializer(instance=price,data=request.data)
+        serializer.is_valid()
+        serializer.save()
+        return Response(serializer.data)
