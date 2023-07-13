@@ -17,11 +17,8 @@ class addingBuilding(GenericAPIView,CreateModelMixin,ListModelMixin) :
     serializer_class = BuildingSerializer
     def post(self,request) :
         authorization_header = request.headers.get('Authorization')
-        if checkingAuthenticationForAdmin(authorization_header):
-            logging.error("From Building Details POST method")
-            return self.create(request)
-        else:
-             raise AuthenticationFailed("somthing went wrong")
+        return self.create(request)
+      
  
 
 
@@ -65,12 +62,17 @@ class UpdateBuildingAndDeleteBuildingGettingParticularBuilding(GenericAPIView,De
 
 
 class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin):
+    
     queryset = FloorDetails.objects.all()
     serializer_class = FloorSerializer
     def post(self,request):
         building_name = request.data.get('building')
+        print(building_name,'nnnnnnnnnnnnaaaaaaaammmmmeeeee')
         location = request.data.get('location')
-        building_data = BuildingDetails.objects.filter(building_name=building_name , location=location).first()
+        print(BuildingDetails.objects.all()[0].building_id,'==================================')
+        building_data=BuildingDetails.objects.filter(building_name=building_name , location=location).first()
+        # building_data = BuildingDetails.objects.all()[0]
+        print(building_data.building_name,'--------------------')
         listOfFloors = FloorDetails.objects.filter(building = building_data.building_id)
         count = 0 
         if len(listOfFloors) < int(building_data.no_of_floors) and building_data.building_id:
@@ -79,10 +81,18 @@ class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin)
                     count+=1;
             if(count == len(listOfFloors)):
                 request.data['building'] = building_data.building_id
+                type_of_slots=request.data.get('floor_slots')
+                print(type_of_slots,'---------------------_________________-----------------')
+                total_slots=int(type_of_slots.get('four_wheeler'))+int(type_of_slots.get('two_wheeler'))
+                request.data['no_of_slots']=total_slots
+                print(type_of_slots,'------------------')
+
                 logging.info("From Floor Details POST method")
+                print(request.data,"---------------------------------------")
+
                 floordata =  self.create(request)
                 slot = InsertSlots()
-                slot.post(floordata.data['floor_id'])
+                slot.post(floordata.data['floor_id'],type_of_slots)
                 return floordata
             return Response("saved sucessfully",status=status.HTTP_200_OK)
            
@@ -140,7 +150,6 @@ class FloorActiveAndInactive(APIView):
                   slot.status = "active"
                   slot.save()
         logging.info("for loop ending")
-
         return Response(status=status.HTTP_201_CREATED)
     
     
@@ -159,17 +168,28 @@ class SlotUpdate(APIView) :
 
 
 class InsertSlots(APIView):
-    def post(self,id):
+    def post(self,id,type_of_slots):
         logging.info("From Building Details POST method")
         floor_details = FloorDetails.objects.get(floor_id=id)
         logging.info("for loop starting")
-        for i in range(1, floor_details.no_of_slots+1):
+        print(type_of_slots,'-------------------------------------')
+        two_wheeler=int(type_of_slots['two_wheeler'])
+        four_wheeler=int(type_of_slots['four_wheeler'])
+        for i in range(1,two_wheeler+1):
             slot = SlotDetails()
             slot.slot_name = floor_details.floor_no + '-S' + str(i)
             slot.status = 'active'
             slot.floor = floor_details
-            slot.save()  # Save the slot object to the database
-        logging.info("for loop ending")
+            slot.slot_type='two_wheeler'
+            slot.save()
+            logging.info("for loop ending")
+        for i in range(1,four_wheeler+1):
+            slot = SlotDetails()
+            slot.slot_name = floor_details.floor_no + '-S' + str(two_wheeler+i)
+            slot.status = 'active'
+            slot.floor = floor_details
+            slot.slot_type='four_wheeler'
+            slot.save() 
         return Response(status=status.HTTP_201_CREATED)
 
 

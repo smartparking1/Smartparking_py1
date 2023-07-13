@@ -23,17 +23,13 @@ from reportlab.lib.pagesizes import portrait
 class GetVehicledetails(GenericAPIView,RetrieveModelMixin):
        queryset=VehicleParking.objects.all()
        serializer_class=VehicleParkingSerializer
+
        def post(self, request):
         vehicle_data = request.data
-        print(vehicle_data)
         vehicle=VehicleParking.objects.filter(vehicle_no=vehicle_data['vehicle_no']).last()
-        print(vehicle,"---------------------------")
-       
         slipsize = (350, 250)
-
         time_difference = (vehicle.checkout_time.time().hour-vehicle.checkin_time.time().hour)+((vehicle.checkout_time.time().minute-vehicle.checkin_time.time().minute)/100)
-        
-        
+       #  time_difference=
     
         response = HttpResponse(content_type='application/pdf')
         response['Content-Disposition'] = 'attachment; filename="pay_slip.pdf"'

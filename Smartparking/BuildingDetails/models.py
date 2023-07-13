@@ -14,7 +14,6 @@ class BuildingDetails(models.Model):
         managed = False
         db_table = 'building_details'
 
-
 class FloorDetails(models.Model):
     floor_id = models.AutoField(primary_key=True)
     floor_no = models.CharField(max_length=45)
@@ -31,6 +30,8 @@ class SlotDetails(models.Model):
     slot_name = models.CharField(max_length=45)
     status = models.CharField(max_length=45)
     floor = models.ForeignKey(FloorDetails, models.DO_NOTHING)
+    slot_type = models.CharField(max_length=45, blank=True, null=True)
+
 
     class Meta:
         managed = False

@@ -1,0 +1,1759 @@
+[
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "serializers",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
+        "label": "get_image_dimensions",
+        "importPath": "django.core.files.images",
+        "description": "django.core.files.images",
+        "isExtraImport": true,
+        "detail": "django.core.files.images",
+        "documentation": {}
+    },
+    {
+        "label": "smart_str",
+        "importPath": "django.utils.encoding",
+        "description": "django.utils.encoding",
+        "isExtraImport": true,
+        "detail": "django.utils.encoding",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationFailed",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationFailed",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "AuthenticationFailed",
+        "importPath": "rest_framework.exceptions",
+        "description": "rest_framework.exceptions",
+        "isExtraImport": true,
+        "detail": "rest_framework.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "employee_authentication.models",
+        "description": "employee_authentication.models",
+        "isExtraImport": true,
+        "detail": "employee_authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "employee_authentication.models",
+        "description": "employee_authentication.models",
+        "isExtraImport": true,
+        "detail": "employee_authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "GenericAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
+        "isExtraImport": true,
+        "detail": "rest_framework.generics",
+        "documentation": {}
+    },
+    {
+        "label": "GenericAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
+        "isExtraImport": true,
+        "detail": "rest_framework.generics",
+        "documentation": {}
+    },
+    {
+        "label": "GenericAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
+        "isExtraImport": true,
+        "detail": "rest_framework.generics",
+        "documentation": {}
+    },
+    {
+        "label": "GenericAPIView",
+        "importPath": "rest_framework.generics",
+        "description": "rest_framework.generics",
+        "isExtraImport": true,
+        "detail": "rest_framework.generics",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "CreateModelMixin",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "ListModelMixin",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateModelMixin",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "RetrieveModelMixin",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "DestroyModelMixin",
+        "importPath": "rest_framework.mixins",
+        "description": "rest_framework.mixins",
+        "isExtraImport": true,
+        "detail": "rest_framework.mixins",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "APIView",
+        "importPath": "rest_framework.views",
+        "description": "rest_framework.views",
+        "isExtraImport": true,
+        "detail": "rest_framework.views",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "FileResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "JsonResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectDoesNotExist",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectDoesNotExist",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectDoesNotExist",
+        "importPath": "django.core.exceptions",
+        "description": "django.core.exceptions",
+        "isExtraImport": true,
+        "detail": "django.core.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.validators",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.validators",
+        "description": "django.contrib.auth.validators",
+        "detail": "django.contrib.auth.validators",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "rest_framework.response",
+        "description": "rest_framework.response",
+        "isExtraImport": true,
+        "detail": "rest_framework.response",
+        "documentation": {}
+    },
+    {
+        "label": "jwt,datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt.datetime",
+        "description": "jwt.datetime",
+        "detail": "jwt.datetime",
+        "documentation": {}
+    },
+    {
+        "label": "csrf_exempt",
+        "importPath": "django.views.decorators.csrf",
+        "description": "django.views.decorators.csrf",
+        "isExtraImport": true,
+        "detail": "django.views.decorators.csrf",
+        "documentation": {}
+    },
+    {
+        "label": "JSONRenderer",
+        "importPath": "rest_framework.renderers",
+        "description": "rest_framework.renderers",
+        "isExtraImport": true,
+        "detail": "rest_framework.renderers",
+        "documentation": {}
+    },
+    {
+        "label": "letter",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "portrait",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "canvas",
+        "importPath": "reportlab.pdfgen",
+        "description": "reportlab.pdfgen",
+        "isExtraImport": true,
+        "detail": "reportlab.pdfgen",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleParkingSerializer",
+        "importPath": "Vehicalparkingapp.serializer",
+        "description": "Vehicalparkingapp.serializer",
+        "isExtraImport": true,
+        "detail": "Vehicalparkingapp.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleParking",
+        "importPath": "Vehicalparkingapp.models",
+        "description": "Vehicalparkingapp.models",
+        "isExtraImport": true,
+        "detail": "Vehicalparkingapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleParking",
+        "importPath": "Vehicalparkingapp.models",
+        "description": "Vehicalparkingapp.models",
+        "isExtraImport": true,
+        "detail": "Vehicalparkingapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "employee_authentication",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "employee_authentication",
+        "description": "employee_authentication",
+        "detail": "employee_authentication",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingDetails",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "BuildingDetails",
+        "description": "BuildingDetails",
+        "detail": "BuildingDetails",
+        "documentation": {}
+    },
+    {
+        "label": "Vehicalparkingapp",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "Vehicalparkingapp",
+        "description": "Vehicalparkingapp",
+        "detail": "Vehicalparkingapp",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "PdfGenarations.views",
+        "description": "PdfGenarations.views",
+        "isExtraImport": true,
+        "detail": "PdfGenarations.views",
+        "documentation": {}
+    },
+    {
+        "label": "static",
+        "importPath": "django.conf.urls.static",
+        "description": "django.conf.urls.static",
+        "isExtraImport": true,
+        "detail": "django.conf.urls.static",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "BuildingDetails.models",
+        "description": "BuildingDetails.models",
+        "isExtraImport": true,
+        "detail": "BuildingDetails.models",
+        "documentation": {}
+    },
+    {
+        "label": "SlotDetails",
+        "importPath": "BuildingDetails.models",
+        "description": "BuildingDetails.models",
+        "isExtraImport": true,
+        "detail": "BuildingDetails.models",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "IsAuthenticated",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "IsAdminUser",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "AllowAny",
+        "importPath": "rest_framework.permissions",
+        "description": "rest_framework.permissions",
+        "isExtraImport": true,
+        "detail": "rest_framework.permissions",
+        "documentation": {}
+    },
+    {
+        "label": "permission_classes",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "BuildingDetails.migrations.0001_initial",
+        "description": "BuildingDetails.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='BuildingDetails',\n            fields=[\n                ('building_id', models.AutoField(primary_key=True, serialize=False)),\n                ('building_name', models.CharField(max_length=45)),",
+        "detail": "BuildingDetails.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingdetailsConfig",
+        "kind": 6,
+        "importPath": "BuildingDetails.apps",
+        "description": "BuildingDetails.apps",
+        "peekOfCode": "class BuildingdetailsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'BuildingDetails'",
+        "detail": "BuildingDetails.apps",
+        "documentation": {}
+    },
+    {
+        "label": "FloorRequirementSatisfiedException",
+        "kind": 6,
+        "importPath": "BuildingDetails.exception",
+        "description": "BuildingDetails.exception",
+        "peekOfCode": "class FloorRequirementSatisfiedException(Exception):\n    def __init__(self,message):\n        self.message=message",
+        "detail": "BuildingDetails.exception",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingDetails",
+        "kind": 6,
+        "importPath": "BuildingDetails.models",
+        "description": "BuildingDetails.models",
+        "peekOfCode": "class BuildingDetails(models.Model):\n    building_id = models.AutoField(primary_key=True)\n    building_name = models.CharField(max_length=45)\n    location = models.CharField(max_length=45)\n    status = models.CharField(max_length=45)\n    no_of_floors = models.CharField(max_length=45)\n    images = models.ImageField(upload_to='images/',default='')\n    class Meta:\n        managed = False\n        db_table = 'building_details'",
+        "detail": "BuildingDetails.models",
+        "documentation": {}
+    },
+    {
+        "label": "FloorDetails",
+        "kind": 6,
+        "importPath": "BuildingDetails.models",
+        "description": "BuildingDetails.models",
+        "peekOfCode": "class FloorDetails(models.Model):\n    floor_id = models.AutoField(primary_key=True)\n    floor_no = models.CharField(max_length=45)\n    no_of_slots = models.IntegerField()\n    status = models.CharField(max_length=45)\n    building = models.ForeignKey(BuildingDetails, models.DO_NOTHING)\n    class Meta:\n        managed = False\n        db_table = 'floor_details'\nclass SlotDetails(models.Model):",
+        "detail": "BuildingDetails.models",
+        "documentation": {}
+    },
+    {
+        "label": "SlotDetails",
+        "kind": 6,
+        "importPath": "BuildingDetails.models",
+        "description": "BuildingDetails.models",
+        "peekOfCode": "class SlotDetails(models.Model):\n    slot_id = models.AutoField(primary_key=True)\n    slot_name = models.CharField(max_length=45)\n    status = models.CharField(max_length=45)\n    floor = models.ForeignKey(FloorDetails, models.DO_NOTHING)\n    slot_type = models.CharField(max_length=45, blank=True, null=True)\n    class Meta:\n        managed = False\n        db_table = 'slot_details'",
+        "detail": "BuildingDetails.models",
+        "documentation": {}
+    },
+    {
+        "label": "FloorSerializer",
+        "kind": 6,
+        "importPath": "BuildingDetails.serializers",
+        "description": "BuildingDetails.serializers",
+        "peekOfCode": "class FloorSerializer(serializers.ModelSerializer) :\n    # building = BuildingSerializer()\n    class Meta :\n        model = FloorDetails\n        fields = '__all__'\n    # def create(self, validated_data):\n    #     building_data = validated_data.pop('building')\n    #     building = BuildingDetails.objects.filter(**building_data).first()\n    #     floor = FloorDetails.objects.create(building=building,**validated_data)\n    #     return floor",
+        "detail": "BuildingDetails.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "FloorsDetailsSerializer",
+        "kind": 6,
+        "importPath": "BuildingDetails.serializers",
+        "description": "BuildingDetails.serializers",
+        "peekOfCode": "class FloorsDetailsSerializer(serializers.ModelSerializer):\n    # building = BuildingSerializer(read_only=True)\n    class Meta:\n        model = FloorDetails\n        fields = '__all__'\n    # def create(self, validated_data):\n    #     building_data = validated_data.pop('building')\n    #     building_id = building_data.get('building_id')\n    #     building, _ = BuildingDetails.objects.get_or_create(building_id=building_id, defaults=building_data)\n    #     validated_data['building'] = building",
+        "detail": "BuildingDetails.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SlotSerializer",
+        "kind": 6,
+        "importPath": "BuildingDetails.serializers",
+        "description": "BuildingDetails.serializers",
+        "peekOfCode": "class SlotSerializer(serializers.ModelSerializer):\n    floor = FloorSerializer()\n    class Meta:\n        model = SlotDetails\n        fields = '__all__'\n    def create(self, validated_data):\n        floor_data = validated_data.pop('floor')\n        building_data = floor_data.pop('building')\n        building = BuildingDetails.objects.create(**building_data)\n        floor = FloorDetails.objects.create(building=building,**floor_data)",
+        "detail": "BuildingDetails.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "SlotDetailsSerializer",
+        "kind": 6,
+        "importPath": "BuildingDetails.serializers",
+        "description": "BuildingDetails.serializers",
+        "peekOfCode": "class SlotDetailsSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = SlotDetails\n        fields = '__all__'\n    def update(self, instance, validated_data):\n        # Update the fields of SlotDetails instance\n        instance.status = validated_data.get('status', instance.status)\n        # Save the updated SlotDetails instance\n        instance.save()\n        return instance",
+        "detail": "BuildingDetails.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingSerializer",
+        "kind": 6,
+        "importPath": "BuildingDetails.serializers",
+        "description": "BuildingDetails.serializers",
+        "peekOfCode": "class BuildingSerializer(serializers.ModelSerializer):\n    images = serializers.ImageField(write_only=True)\n    image_url = serializers.SerializerMethodField(read_only=True)\n    class Meta:\n        model = BuildingDetails\n        fields = ['building_id', 'building_name', 'location', 'status', 'images', 'no_of_floors', 'image_url']\n    def validate_images(self, value):\n        if value:\n            w, h = get_image_dimensions(value)\n            if w > 3000 or h > 3000:",
+        "detail": "BuildingDetails.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "checkingAuthenticationForEmployee",
+        "kind": 2,
+        "importPath": "BuildingDetails.service",
+        "description": "BuildingDetails.service",
+        "peekOfCode": "def checkingAuthenticationForEmployee(authorization_header):\n            if not authorization_header:\n                    raise AuthenticationFailed(\"Unauthenticated\")\n            try:\n                token = authorization_header.split(' ')[1]\n                payload = jwt.decode(token, 'secret', algorithms=['HS256'])\n                print(payload)\n                currentuser=payload.get('id')\n                print(currentuser)\n                current_employeeRole=EmployeeDetails.objects.get(email_id=currentuser).role",
+        "detail": "BuildingDetails.service",
+        "documentation": {}
+    },
+    {
+        "label": "checkingAuthenticationForAdmin",
+        "kind": 2,
+        "importPath": "BuildingDetails.service",
+        "description": "BuildingDetails.service",
+        "peekOfCode": "def checkingAuthenticationForAdmin(authorization_header):\n            if not authorization_header:\n                    raise AuthenticationFailed(\"Unauthenticated\")\n            try:\n                token = authorization_header.split(' ')[1]\n                payload = jwt.decode(token, 'secret', algorithms=['HS256'])\n                print(payload)\n                currentuser=payload.get('id')\n                print(currentuser)\n                current_employeeRole=EmployeeDetails.objects.get(email_id=currentuser).role",
+        "detail": "BuildingDetails.service",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingDetailsTestCase",
+        "kind": 6,
+        "importPath": "BuildingDetails.tests",
+        "description": "BuildingDetails.tests",
+        "peekOfCode": "class BuildingDetailsTestCase(TestCase):\n    def test_create_building_details(self):\n        building = BuildingDetails.objects.get(\n            building_name='Building A',\n            location='City X',\n            status='Active',\n            no_of_floors='10'\n        )\n        self.assertEqual(building.building_name, 'Building A')\n        self.assertEqual(building.location, 'City X')",
+        "detail": "BuildingDetails.tests",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "BuildingDetails.urls",
+        "description": "BuildingDetails.urls",
+        "peekOfCode": "urlpatterns = [\n    path('addingbuilding/',addingBuilding.as_view(),name='addingBuilding'),\n    path('GettingAllBuildings/',GettingAllBuildings.as_view(),name='GettingAllBuildings'),\n    path('UpdateBuildingAndDeleteBuildingGettingParticularBuilding/<int:pk>/',UpdateBuildingAndDeleteBuildingGettingParticularBuilding.as_view(),name='UpdateBuildingAndDeleteBuildingGettingParticularBuilding'),\n    path('addingFloorAndGetAllFloors/',addingFloorAndGetAllFloors.as_view(),name='insertfloorandgettingall'),\n    path('UpdateFloor/<int:pk>/',UpdateFloor.as_view(),name='UpdateFloor'),\n    path('DeleteFloorsAndGettingParticularfloor/<int:pk>/',DeleteFloorsAndGettingParticularfloor.as_view(),name='DeleteFloorsAndGettingParticularfloor'),\n    path('insertslot/<int:id>/',InsertSlots.as_view(),name='insertslot'),\n    path('buildinginactiveandactive/<int:id>/',BuildingInactiveAndactive.as_view(),name = 'buildinginactive'),\n    path('SlotUpdate/<int:slot_id>/<str:slot_status>/',SlotUpdate.as_view(),name='SlotUpdate'),",
+        "detail": "BuildingDetails.urls",
+        "documentation": {}
+    },
+    {
+        "label": "addingBuilding",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class addingBuilding(GenericAPIView,CreateModelMixin,ListModelMixin) :\n    queryset = BuildingDetails.objects.all()\n    serializer_class = BuildingSerializer\n    def post(self,request) :\n        authorization_header = request.headers.get('Authorization')\n        return self.create(request)\nclass GettingAllBuildings(GenericAPIView,ListModelMixin):\n        queryset = BuildingDetails.objects.all()\n        serializer_class = BuildingSerializer\n        def get(self,request) :",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "GettingAllBuildings",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class GettingAllBuildings(GenericAPIView,ListModelMixin):\n        queryset = BuildingDetails.objects.all()\n        serializer_class = BuildingSerializer\n        def get(self,request) :\n            authorization_header = request.headers.get('Authorization')\n            if checkingAuthenticationForEmployee(authorization_header):\n                logging.info(\"From Building Details get method\")\n                logging.info(\"From Building Details GET method to retrive all objects\")\n                return self.list(request)\nclass UpdateBuildingAndDeleteBuildingGettingParticularBuilding(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin) :",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateBuildingAndDeleteBuildingGettingParticularBuilding",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class UpdateBuildingAndDeleteBuildingGettingParticularBuilding(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin) :\n    queryset = BuildingDetails.objects.all()\n    serializer_class = BuildingSerializer\n    def put(self,request,**kwargs):\n        authorization_header = request.headers.get('Authorization')\n        if checkingAuthenticationForEmployee(authorization_header):\n            logging.info(\"From Building Details PUT method\")\n            return self.update(request,**kwargs)\n    def delete(self,request,**kwargs):\n        authorization_header = request.headers.get('Authorization')",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "addingFloorAndGetAllFloors",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer\n    def post(self,request):\n        building_name = request.data.get('building')\n        print(building_name,'nnnnnnnnnnnnaaaaaaaammmmmeeeee')\n        location = request.data.get('location')\n        print(BuildingDetails.objects.all()[0].building_id,'==================================')\n        building_data=BuildingDetails.objects.filter(building_name=building_name , location=location).first()\n        # building_data = BuildingDetails.objects.all()[0]",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateFloor",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class UpdateFloor(GenericAPIView,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorsDetailsSerializer\n    def put(self,request,**kwargs):\n        logging.info(\"From Floor Details PUT method\")\n        return self.update(request,**kwargs)\nclass DeleteFloorsAndGettingParticularfloor(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer\n    def delete(self,request,**kwargs):",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "DeleteFloorsAndGettingParticularfloor",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class DeleteFloorsAndGettingParticularfloor(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer\n    def delete(self,request,**kwargs):\n        logging.info(\"From Building Details DELETE method\")\n        return self.destroy(request,**kwargs)\n    def get(self,request,**kwargs):\n        logging.info(\"From Building Details GET method to retrive particular objects\")\n        return self.retrieve(request,**kwargs)\nclass FloorActiveAndInactive(APIView):",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "FloorActiveAndInactive",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class FloorActiveAndInactive(APIView):\n    def put(self, request, id):\n        floor = FloorDetails.objects.get(floor_id = id)\n        if floor.status == 'active':\n            floor.status = 'inactive'\n            floor.save()\n        else :\n            floor.status = 'active'\n            floor.save()\n        logging.info(\"From Building Details POST method\")",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "SlotUpdate",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class SlotUpdate(APIView) :\n    queryset = SlotDetails.objects.all()\n    serializer_class = SlotDetailsSerializer\n    def put(self,request,slot_id,slot_status):\n        try:\n            slot = SlotDetails.objects.get(slot_id = slot_id)\n            slot.status = slot_status\n            slot.save()\n            return Response(\"Updated Sucessfully\",status=status.HTTP_201_CREATED)\n        except ObjectDoesNotExist as e:",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "InsertSlots",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class InsertSlots(APIView):\n    def post(self,id,type_of_slots):\n        logging.info(\"From Building Details POST method\")\n        floor_details = FloorDetails.objects.get(floor_id=id)\n        logging.info(\"for loop starting\")\n        print(type_of_slots,'-------------------------------------')\n        two_wheeler=int(type_of_slots['two_wheeler'])\n        four_wheeler=int(type_of_slots['four_wheeler'])\n        for i in range(1,two_wheeler+1):\n            slot = SlotDetails()",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "GettingAllSlots",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class GettingAllSlots(GenericAPIView,ListModelMixin):\n    queryset = SlotDetails.objects.all()\n    serializer_class = SlotDetailsSerializer\n    def get(self,request):\n        return self.list(request)\nclass BuildingInactiveAndactive(APIView) :\n    def put(self,request,id):\n        building_details = BuildingDetails.objects.get(building_id=id)\n        active = 'active'\n        inactive = 'inactive'",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "BuildingInactiveAndactive",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class BuildingInactiveAndactive(APIView) :\n    def put(self,request,id):\n        building_details = BuildingDetails.objects.get(building_id=id)\n        active = 'active'\n        inactive = 'inactive'\n        if building_details.status == active:\n            building_details.status = inactive\n            building_details.save()\n        else :\n            building_details.status = active",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "employee_authentication.migrations.0001_initial",
+        "description": "employee_authentication.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='EmployeeDetails',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "employee_authentication.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "employee_authentication.migrations.0002_alter_employeedetails_options",
+        "description": "employee_authentication.migrations.0002_alter_employeedetails_options",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('employee_authentication', '0001_initial'),\n    ]\n    operations = [\n        migrations.AlterModelOptions(\n            name='employeedetails',\n            options={'managed': False},\n        ),\n    ]",
+        "detail": "employee_authentication.migrations.0002_alter_employeedetails_options",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "employee_authentication.migrations.0003_alter_employeedetails_table",
+        "description": "employee_authentication.migrations.0003_alter_employeedetails_table",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('employee_authentication', '0002_alter_employeedetails_options'),\n    ]\n    operations = [\n        migrations.AlterModelTable(\n            name='employeedetails',\n            table='employeedetails',\n        ),\n    ]",
+        "detail": "employee_authentication.migrations.0003_alter_employeedetails_table",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeAuthenticationConfig",
+        "kind": 6,
+        "importPath": "employee_authentication.apps",
+        "description": "employee_authentication.apps",
+        "peekOfCode": "class EmployeeAuthenticationConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'employee_authentication'",
+        "detail": "employee_authentication.apps",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeDetails",
+        "kind": 6,
+        "importPath": "employee_authentication.models",
+        "description": "employee_authentication.models",
+        "peekOfCode": "class EmployeeDetails(AbstractUser):\n    employee_name = models.CharField(max_length=45)\n    role = models.CharField(max_length=45)\n    mobile_number = models.CharField(max_length=45)\n    email_id = models.CharField(max_length=45,unique=True)\n    password = models.CharField(max_length=45)\n    location = models.CharField(max_length=45)\n    USERNAME_FIELD='email_id'\n    REQUIRED_FIELDS=[]\n    class Meta:",
+        "detail": "employee_authentication.models",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeSerializer",
+        "kind": 6,
+        "importPath": "employee_authentication.serializers",
+        "description": "employee_authentication.serializers",
+        "peekOfCode": "class EmployeeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model=EmployeeDetails\n        fields = ['id','email_id','password','employee_name','role','mobile_number','location']\n        extra_kwargs={\n            'password':{'write_only':True}\n        }\n    def create(self, validated_data):\n        password=validated_data.pop('password',None)\n        instance=self.Meta.model(**validated_data)",
+        "detail": "employee_authentication.serializers",
+        "documentation": {}
+    },
+    {
+        "label": "sending_jsonObject",
+        "kind": 2,
+        "importPath": "employee_authentication.service_of_empoyee",
+        "description": "employee_authentication.service_of_empoyee",
+        "peekOfCode": "def sending_jsonObject(current_object):\n    data={\n        \"employee_name\":current_object.employee_name,\n        \"role\":current_object.role,\n        \"mobile_number\":current_object.mobile_number,\n        \"email_id\":current_object.email_id,\n        \"location\":current_object.location,\n        }\n    json_data =json.dumps(data)\n    print(type(json_data))",
+        "detail": "employee_authentication.service_of_empoyee",
+        "documentation": {}
+    },
+    {
+        "label": "checkingAuthenticationForAdmin",
+        "kind": 2,
+        "importPath": "employee_authentication.service_of_empoyee",
+        "description": "employee_authentication.service_of_empoyee",
+        "peekOfCode": "def checkingAuthenticationForAdmin(authorization_header):\n            if not authorization_header:\n                    raise AuthenticationFailed(\"Unauthenticated\")\n            try:\n                token = authorization_header.split(' ')[1]\n                payload = jwt.decode(token, 'secret', algorithms=['HS256'])\n                print(payload)\n                currentuser=payload.get('id')\n                print(currentuser)\n                current_employeeRole=EmployeeDetails.objects.get(email_id=currentuser).role",
+        "detail": "employee_authentication.service_of_empoyee",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "employee_authentication.urls",
+        "description": "employee_authentication.urls",
+        "peekOfCode": "urlpatterns = [\n    path('EmployeeRegister/',EmployeeRegister.as_view(),name='EmployeeRegister'),\n    path('EmployeeLogin/',EmployeeLogin.as_view(),name='EmployeeLogin'),\n    path('GettingAllEmployeeList/',GettingAllEmployeeList.as_view(),name='GettingAllEmployeeList'),\n    path('EmployeeLogout/',EmployeeLogout.as_view(),name='EmployeeLogout'),\n    path('EmployeeRoleUpadate/',EmployeeRoleUpadate.as_view(),name='EmployeeRoleUpadate'),\n    path('DeletingEmployees/<int:pk>/',DeletingEmployees.as_view(),name='DeletingEmployees'),\n]",
+        "detail": "employee_authentication.urls",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeRegister",
+        "kind": 6,
+        "importPath": "employee_authentication.views",
+        "description": "employee_authentication.views",
+        "peekOfCode": "class EmployeeRegister(GenericAPIView,CreateModelMixin):\n    serializer_class=EmployeeSerializer\n    queryset=EmployeeDetails.objects.all()\n    @csrf_exempt\n    def post(self,request):\n        return self.create(request)\n#* this is the Employeee Login Method and user will get JWT token heare \nclass EmployeeLogin(APIView):\n    def post(self,request):        \n        email=request.data['email_id']",
+        "detail": "employee_authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeLogin",
+        "kind": 6,
+        "importPath": "employee_authentication.views",
+        "description": "employee_authentication.views",
+        "peekOfCode": "class EmployeeLogin(APIView):\n    def post(self,request):        \n        email=request.data['email_id']\n        password=request.data['password']\n        employee=EmployeeDetails.objects.filter(email_id=email)\n        serializer=EmployeeSerializer(data=employee,many=True)\n        serializer.is_valid()\n        x=((serializer.data))\n        if employee is None or len(employee)==0:\n            raise AuthenticationFailed(\"Invalid User \")",
+        "detail": "employee_authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "GettingAllEmployeeList",
+        "kind": 6,
+        "importPath": "employee_authentication.views",
+        "description": "employee_authentication.views",
+        "peekOfCode": "class GettingAllEmployeeList(APIView):\n    def get(self,request):\n        authorization_header = request.headers.get('Authorization')\n        if not authorization_header:\n            raise AuthenticationFailed(\"Unauthenticated\")\n        try:\n            token = authorization_header.split(' ')[1]\n            payload = jwt.decode(token, 'secret', algorithms=['HS256'])\n            print(payload)\n            currentuser=payload.get('id')",
+        "detail": "employee_authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeLogout",
+        "kind": 6,
+        "importPath": "employee_authentication.views",
+        "description": "employee_authentication.views",
+        "peekOfCode": "class EmployeeLogout(APIView):\n    def post(self,request):\n        respone=Response()\n        respone.delete_cookie('jwt')\n        respone.data ={\n            'massage':\"succesfully log outed\"\n        }\n        return respone\nclass EmployeeRoleUpadate(APIView):\n    def post(self,request):",
+        "detail": "employee_authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "EmployeeRoleUpadate",
+        "kind": 6,
+        "importPath": "employee_authentication.views",
+        "description": "employee_authentication.views",
+        "peekOfCode": "class EmployeeRoleUpadate(APIView):\n    def post(self,request):\n        authorization_header = request.headers.get('Authorization')\n        try:\n            if checkingAuthenticationForAdmin(authorization_header):\n                email=request.data['email']\n                employee=EmployeeDetails.objects.get(email_id=email)\n                print(employee.employee_name)\n                if employee.role=='admin':\n                    employee.role='employee'",
+        "detail": "employee_authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "DeletingEmployees",
+        "kind": 6,
+        "importPath": "employee_authentication.views",
+        "description": "employee_authentication.views",
+        "peekOfCode": "class DeletingEmployees(GenericAPIView,DestroyModelMixin):\n    queryset=EmployeeDetails.objects.all()\n    serializer_class=EmployeeDetails\n    def delete(self, request, **kwargs):\n        authorization_header = request.headers.get('Authorization')\n        try:\n            if checkingAuthenticationForAdmin(authorization_header):\n                # email=request.data['email']\n                # employee=EmployeeDetails.objects.get(email_id=email)\n                # print(employee.employee_name)",
+        "detail": "employee_authentication.views",
+        "documentation": {}
+    },
+    {
+        "label": "PdfgenarationsConfig",
+        "kind": 6,
+        "importPath": "PdfGenarations.apps",
+        "description": "PdfGenarations.apps",
+        "peekOfCode": "class PdfgenarationsConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'PdfGenarations'",
+        "detail": "PdfGenarations.apps",
+        "documentation": {}
+    },
+    {
+        "label": "GetVehicledetails",
+        "kind": 6,
+        "importPath": "PdfGenarations.views",
+        "description": "PdfGenarations.views",
+        "peekOfCode": "class GetVehicledetails(GenericAPIView,RetrieveModelMixin):\n       queryset=VehicleParking.objects.all()\n       serializer_class=VehicleParkingSerializer\n       def post(self, request):\n        vehicle_data = request.data\n        vehicle=VehicleParking.objects.filter(vehicle_no=vehicle_data['vehicle_no']).last()\n        slipsize = (350, 250)\n        time_difference = (vehicle.checkout_time.time().hour-vehicle.checkin_time.time().hour)+((vehicle.checkout_time.time().minute-vehicle.checkin_time.time().minute)/100)\n       #  time_difference=\n        response = HttpResponse(content_type='application/pdf')",
+        "detail": "PdfGenarations.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Smartparking.asgi",
+        "description": "Smartparking.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "Smartparking.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-g##1z9&w%%3@(q41l@!+r&j7i4^t$ufv!8!4k155j4!axnctg%'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-g##1z9&w%%3@(q41l@!+r&j7i4^t$ufv!8!4k155j4!axnctg%'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'employee_authentication',",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'employee_authentication',\n    'rest_framework',\n    'BuildingDetails',",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n   'corsheaders.middleware.CorsMiddleware',",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "ROOT_URLCONF = 'Smartparking.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'Smartparking.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/4.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME':'parking_management',\n        'USER' : 'root',\n        'PASSWORD' : 'root',\n        'PORT' : '3306',",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.mysql',\n        'NAME':'parking_management',\n        'USER' : 'root',\n        'PASSWORD' : 'root',\n        'PORT' : '3306',\n        'HOST' : 'localhost',\n    }\n}",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'employee_authentication.EmployeeDetails'",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'employee_authentication.EmployeeDetails'\nCORS_ORIGIN_ALLOW_ALL = True",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'employee_authentication.EmployeeDetails'\nCORS_ORIGIN_ALLOW_ALL = True\nimport os",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'employee_authentication.EmployeeDetails'\nCORS_ORIGIN_ALLOW_ALL = True\nimport os\nfrom pathlib import Path\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nAUTH_USER_MODEL = 'employee_authentication.EmployeeDetails'\nCORS_ORIGIN_ALLOW_ALL = True\nimport os\nfrom pathlib import Path\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent\n# ... other settings ...\n# Media files (uploaded files)\nMEDIA_ROOT = BASE_DIR / 'media'",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_USER_MODEL",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "AUTH_USER_MODEL = 'employee_authentication.EmployeeDetails'\nCORS_ORIGIN_ALLOW_ALL = True\nimport os\nfrom pathlib import Path\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent\n# ... other settings ...\n# Media files (uploaded files)\nMEDIA_ROOT = BASE_DIR / 'media'\nMEDIA_URL = '/media/'",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ORIGIN_ALLOW_ALL",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "CORS_ORIGIN_ALLOW_ALL = True\nimport os\nfrom pathlib import Path\n# Build paths inside the project like this: BASE_DIR / 'subdir'.\nBASE_DIR = Path(__file__).resolve().parent.parent\n# ... other settings ...\n# Media files (uploaded files)\nMEDIA_ROOT = BASE_DIR / 'media'\nMEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ... other settings ...\n# Media files (uploaded files)\nMEDIA_ROOT = BASE_DIR / 'media'\nMEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nMEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "MEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Smartparking.urls",
+        "description": "Smartparking.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('Employee/',include('employee_authentication.urls')),\n    path('building/',include('BuildingDetails.urls')),\n    path('pdf/',GetVehicledetails.as_view(),name='payslip.pdf'),\n    path('vehicleparking/',include('Vehicalparkingapp.urls'))\n]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "detail": "Smartparking.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Smartparking.wsgi",
+        "description": "Smartparking.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "Smartparking.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.migrations.0001_initial",
+        "description": "Vehicalparkingapp.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='VehicleParking',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('vehicle_no', models.CharField(max_length=45)),",
+        "detail": "Vehicalparkingapp.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.migrations.0002_prices",
+        "description": "Vehicalparkingapp.migrations.0002_prices",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Vehicalparkingapp', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Prices',\n            fields=[\n                ('id', models.AutoField(primary_key=True, serialize=False)),\n                ('day_type', models.CharField(blank=True, max_length=45, null=True)),",
+        "detail": "Vehicalparkingapp.migrations.0002_prices",
+        "documentation": {}
+    },
+    {
+        "label": "VehicalparkingappConfig",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.apps",
+        "description": "Vehicalparkingapp.apps",
+        "peekOfCode": "class VehicalparkingappConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'Vehicalparkingapp'",
+        "detail": "Vehicalparkingapp.apps",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleNotFound",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.exception",
+        "description": "Vehicalparkingapp.exception",
+        "peekOfCode": "class VehicleNotFound(Exception):\n    pass\nclass InvalidSlot(Exception):\n    pass\nclass PricesAlreadyAdded(Exception):\n    pass",
+        "detail": "Vehicalparkingapp.exception",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidSlot",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.exception",
+        "description": "Vehicalparkingapp.exception",
+        "peekOfCode": "class InvalidSlot(Exception):\n    pass\nclass PricesAlreadyAdded(Exception):\n    pass",
+        "detail": "Vehicalparkingapp.exception",
+        "documentation": {}
+    },
+    {
+        "label": "PricesAlreadyAdded",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.exception",
+        "description": "Vehicalparkingapp.exception",
+        "peekOfCode": "class PricesAlreadyAdded(Exception):\n    pass",
+        "detail": "Vehicalparkingapp.exception",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleParking",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.models",
+        "description": "Vehicalparkingapp.models",
+        "peekOfCode": "class VehicleParking(models.Model):\n    id = models.AutoField(primary_key=True)\n    vehicle_no = models.CharField(max_length=45)\n    vehicle_type = models.CharField(max_length=45)\n    checkin_time = models.DateTimeField()\n    checkout_time = models.DateTimeField(blank=True, null=True)\n    parking_amount = models.IntegerField(blank=True, null=True)\n    fine_amount = models.IntegerField(blank=True, null=True)\n    total_amount = models.IntegerField(blank=True, null=True)\n    slot = models.ForeignKey(SlotDetails, models.DO_NOTHING,related_name='related_name')",
+        "detail": "Vehicalparkingapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "Prices",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.models",
+        "description": "Vehicalparkingapp.models",
+        "peekOfCode": "class Prices(models.Model):\n    id=models.AutoField(primary_key=True)\n    building = models.ForeignKey(BuildingDetails, models.DO_NOTHING)\n    day_type = models.CharField(max_length=45, blank=True, null=True)\n    vehicle_type = models.CharField(max_length=45, blank=True, null=True)\n    price = models.CharField(max_length=45, blank=True, null=True)\n    class Meta:\n        managed = False\n        db_table = 'prices'",
+        "detail": "Vehicalparkingapp.models",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleParkingSerializer",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.serializer",
+        "description": "Vehicalparkingapp.serializer",
+        "peekOfCode": "class VehicleParkingSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = VehicleParking\n        fields = '__all__'\nclass Priceserializer(serializers.ModelSerializer):\n    class Meta:\n        model=Prices\n        fields = '__all__'",
+        "detail": "Vehicalparkingapp.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "Priceserializer",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.serializer",
+        "description": "Vehicalparkingapp.serializer",
+        "peekOfCode": "class Priceserializer(serializers.ModelSerializer):\n    class Meta:\n        model=Prices\n        fields = '__all__'",
+        "detail": "Vehicalparkingapp.serializer",
+        "documentation": {}
+    },
+    {
+        "label": "gettingpriceByslotId",
+        "kind": 2,
+        "importPath": "Vehicalparkingapp.service",
+        "description": "Vehicalparkingapp.service",
+        "peekOfCode": "def gettingpriceByslotId(slotid,vehicle_type,day):\n    slots=SlotDetails.objects.filter(slot_id=slotid).first()\n    buildingid=slots.floor.building.building_id\n    price=Prices.objects.filter(building=buildingid)\n    day= gettingDay(day)\n    record=price.filter(vehicle_type=vehicle_type , day_type=day ).first().price\n    print(record,'------------------------price of the vehicle----------------------')\n    return int(record)\nnormal_day=['Monday','Tuesday','Wednesday','Thursday','Friday']\nweekend_day=['Sunday','Saturday']",
+        "detail": "Vehicalparkingapp.service",
+        "documentation": {}
+    },
+    {
+        "label": "gettingDay",
+        "kind": 2,
+        "importPath": "Vehicalparkingapp.service",
+        "description": "Vehicalparkingapp.service",
+        "peekOfCode": "def gettingDay(day):\n    current_date=day\n    day=current_date.strftime('%A')\n    if(day  not in weekend_day):\n        return 'normal'\n    return 'weekend'\ndef checkingCar(carNo):\n    vehiclelist=VehicleParking.objects.filter(vehicle_no=carNo)\n    print(vehiclelist,'-------------------------')\n    for vehicle in vehiclelist:",
+        "detail": "Vehicalparkingapp.service",
+        "documentation": {}
+    },
+    {
+        "label": "checkingCar",
+        "kind": 2,
+        "importPath": "Vehicalparkingapp.service",
+        "description": "Vehicalparkingapp.service",
+        "peekOfCode": "def checkingCar(carNo):\n    vehiclelist=VehicleParking.objects.filter(vehicle_no=carNo)\n    print(vehiclelist,'-------------------------')\n    for vehicle in vehiclelist:\n        if vehicle.checkout_time is None:\n            print('okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk')\n            raise Exception('okk')\ndef calulatingamout(days_detals,slotid,vehicletype):\n    total_amout=0\n    for day,hours in days_detals.items():",
+        "detail": "Vehicalparkingapp.service",
+        "documentation": {}
+    },
+    {
+        "label": "calulatingamout",
+        "kind": 2,
+        "importPath": "Vehicalparkingapp.service",
+        "description": "Vehicalparkingapp.service",
+        "peekOfCode": "def calulatingamout(days_detals,slotid,vehicletype):\n    total_amout=0\n    for day,hours in days_detals.items():\n        print(day,'================',hours)\n        total_amout+=hours*gettingpriceByslotId(slotid.slot_id,vehicletype,day)\n        print(total_amout)\n    print(total_amout,'000000000000000009999999999999999999934567----------')\n    return total_amout",
+        "detail": "Vehicalparkingapp.service",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleParkingTestCase",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.tests",
+        "description": "Vehicalparkingapp.tests",
+        "peekOfCode": "class VehicleParkingTestCase(TestCase):\n    def setUp(self):\n        building = BuildingDetails.objects.create(\n            building_name='Building A',\n            location='City X',\n            status='Active',\n            no_of_floors=10\n        )\n        floor = FloorDetails.objects.create(floor_no='1', no_of_slots=10, status='Active', building=building)\n        slot = SlotDetails.objects.create(slot_number='A1', floor=floor)",
+        "detail": "Vehicalparkingapp.tests",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Vehicalparkingapp.urls",
+        "description": "Vehicalparkingapp.urls",
+        "peekOfCode": "urlpatterns = [\n    path('insertvehicleparking/',InsertVehicleParking.as_view(),name='insertvehicleparking'),\n    path('PriceInsert/',PriceInsert.as_view(),name='PriceInsert'),\n    path('PriceGetting/',PriceGetting.as_view(),name='PriceGetting'),\n    path('updatevehicleparking/<int:empId>/<str:vehicle_no>/',UpdateVehicleParking.as_view(),name='updatevehicleparking'),\n    path('PriceUpadate/<int:id>/',PriceUpadate.as_view(),name='updatevehicleparking'),\n    path('updatefineamount/',UpdateFineAmount.as_view(),name='updatefineamount'),\n    path('getallvehicleparking/',GetAllVehicles.as_view(),name='getallvehicleparking'),\n]",
+        "detail": "Vehicalparkingapp.urls",
+        "documentation": {}
+    },
+    {
+        "label": "InsertVehicleParking",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.views",
+        "description": "Vehicalparkingapp.views",
+        "peekOfCode": "class InsertVehicleParking(GenericAPIView, CreateModelMixin):\n    queryset = VehicleParking.objects.all()\n    serializer_class = VehicleParkingSerializer\n    def post(self, request):\n        serializer = VehicleParkingSerializer(data=request.data)\n        serializer.is_valid()\n        vehicleparking = serializer.data\n        date = datetime.datetime.now().date()  # Get the current date\n        time = datetime.datetime.now().time()  # Define the desired time\n        combined_datetime = datetime.datetime.combine(date, time)",
+        "detail": "Vehicalparkingapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateVehicleParking",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.views",
+        "description": "Vehicalparkingapp.views",
+        "peekOfCode": "class UpdateVehicleParking(APIView):\n    def put(self,request,empId,vehicle_no) :\n        serializer = VehicleParkingSerializer(data = request.data)\n        serializer.is_valid()\n        vehicleNo  = serializer.data\n        vehicleparkingdata = VehicleParking.objects.filter(vehicle_no=vehicle_no,checkout_time=None)\n        print(vehicleparkingdata,'-------------------------------')\n        try:\n            if(len(vehicleparkingdata)==0):\n                raise VehicleNotFound('Please enter the currect details')",
+        "detail": "Vehicalparkingapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateFineAmount",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.views",
+        "description": "Vehicalparkingapp.views",
+        "peekOfCode": "class UpdateFineAmount(APIView):\n    def put(self,request):\n        serializer = VehicleParkingSerializer(data = request.data)\n        serializer.is_valid()\n        vehicle_data = serializer.data\n        vehicleParking = VehicleParking.objects.filter(vehicle_no = vehicle_data.get('vehicle_no'))\n        for vehicledata in vehicleParking :\n            if vehicledata.checkout_time is None :\n                vehicledata.fine_amount = vehicle_data.get('fine_amount')\n                vehicledata.total_amount = vehicledata.parking_amount + vehicledata.fine_amount",
+        "detail": "Vehicalparkingapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "GetAllVehicles",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.views",
+        "description": "Vehicalparkingapp.views",
+        "peekOfCode": "class GetAllVehicles(GenericAPIView,ListModelMixin) :\n    queryset = VehicleParking.objects.all()\n    serializer_class = VehicleParkingSerializer\n    def get(self,request) :      \n        return self.list(request)\n#* price modifications\nclass PriceInsert(GenericAPIView,CreateModelMixin):\n    queryset=Prices.objects.all()\n    serializer_class=Priceserializer\n    def post(self,request):",
+        "detail": "Vehicalparkingapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "PriceInsert",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.views",
+        "description": "Vehicalparkingapp.views",
+        "peekOfCode": "class PriceInsert(GenericAPIView,CreateModelMixin):\n    queryset=Prices.objects.all()\n    serializer_class=Priceserializer\n    def post(self,request):\n        print(request.data)\n        return self.create(request)\nclass PriceGetting(GenericAPIView,ListModelMixin):\n    queryset=Prices.objects.all()\n    serializer_class=Priceserializer\n    @permission_classes([IsAuthenticated])",
+        "detail": "Vehicalparkingapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "PriceGetting",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.views",
+        "description": "Vehicalparkingapp.views",
+        "peekOfCode": "class PriceGetting(GenericAPIView,ListModelMixin):\n    queryset=Prices.objects.all()\n    serializer_class=Priceserializer\n    @permission_classes([IsAuthenticated])\n    def get(self,request) :      \n        return self.list(request)\nclass PriceUpadate(APIView):\n    def put(self,request,id):\n        price = Prices.objects.get(id=id)\n        print(price)",
+        "detail": "Vehicalparkingapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "PriceUpadate",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.views",
+        "description": "Vehicalparkingapp.views",
+        "peekOfCode": "class PriceUpadate(APIView):\n    def put(self,request,id):\n        price = Prices.objects.get(id=id)\n        print(price)\n        serializer=Priceserializer(instance=price,data=request.data)\n        serializer.is_valid()\n        serializer.save()\n        return Response(serializer.data)\nclass PriceInsert(GenericAPIView,CreateModelMixin):\n    queryset=Prices.objects.all()",
+        "detail": "Vehicalparkingapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "PriceInsert",
+        "kind": 6,
+        "importPath": "Vehicalparkingapp.views",
+        "description": "Vehicalparkingapp.views",
+        "peekOfCode": "class PriceInsert(GenericAPIView,CreateModelMixin):\n    queryset=Prices.objects.all()\n    serializer_class=Priceserializer\n    @permission_classes([IsAuthenticated])\n    def post(self,request):\n        print(request.data)\n        listOfPrices = Prices.objects.filter(building_id=request.data.get('building'))\n        print(listOfPrices)\n        count = 0\n        for price in listOfPrices :",
+        "detail": "Vehicalparkingapp.views",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "manage",
+        "description": "manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Smartparking.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "manage",
+        "documentation": {}
+    }
+]
