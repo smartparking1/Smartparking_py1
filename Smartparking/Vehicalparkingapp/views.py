@@ -12,6 +12,8 @@ import math
 from .service import *
 import datetime
 from django.http import JsonResponse
+from rest_framework.permissions import  IsAuthenticated, IsAdminUser, AllowAny
+from rest_framework.decorators import permission_classes
 
 
 
@@ -33,7 +35,7 @@ class InsertVehicleParking(GenericAPIView, CreateModelMixin):
         vehicle_parking.vehicle_no = vehicleparking.get('vehicle_no')
         vehicle_parking.vehicle_type = vehicleparking.get('vehicle_type')
         vehicle_parking.checkin_time = combined_datetime
-        vehicle_parking.parking_amount = int( gettingpriceByslotId(vehicleparking.get('slot'),vehicle_parking.vehicle_type))
+        vehicle_parking.parking_amount = int( gettingpriceByslotId(vehicleparking.get('slot'),vehicle_parking.vehicle_type,date))
        
         vehicle_parking.fine_amount = vehicleparking.get('fine_amount')
         vehicle_parking.total_amount = vehicle_parking.parking_amount + vehicle_parking.fine_amount
@@ -72,9 +74,33 @@ class UpdateVehicleParking(APIView):
                         combined_datetime = datetime.datetime.combine(date, time)
                         vehicle_data.checkout_time = combined_datetime
                         if (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour) > 0:
-                            time_difference = (vehicle_data.checkout_time.time().hour-vehicle_data.checkin_time.time().hour)+((vehicle_data.checkout_time.time().minute-vehicle_data.checkin_time.time().minute)/100)
-                            print(math.ceil(time_difference))
-                            vehicle_data.total_amount = vehicle_data.total_amount*math.ceil(time_difference)
+
+                            start_date = vehicle_data.checkin_time  #starting Date
+                            end_date = vehicle_data.checkout_time   # Checkouttime
+                            hours_per_day = {}
+                            current_date = vehicle_data.checkin_time.date()
+
+
+    
+                            while current_date<=end_date.date():
+                                if current_date == start_date.date():
+                                        hours = 24 - start_date.hour
+                                elif current_date == end_date.date():
+                                        hours = end_date.hour
+                                else:
+                                    hours = 24
+                                hours_per_day[current_date] = hours
+                                current_date += datetime.timedelta(days=1)
+                            print(hours_per_day,'''''''''dvfdvdvdvdvdvdvdvdvdvdv''''''''''''''''')
+
+                            total_time=0
+                            total_days=0
+                            for day,hours in hours_per_day.items():
+                                total_time+=hours
+                                total_days+=1
+                            print(total_days,total_time ,"0000000000000000000000000000000")
+                                                    
+                            vehicle_data.total_amount = calulatingamout(hours_per_day,vehicle_data.slot,vehicle_data.vehicle_type)  
                         else :
                             vehicle_data.total_amount = vehicle_data.total_amount
                         try:
@@ -133,7 +159,8 @@ class PriceInsert(GenericAPIView,CreateModelMixin):
 class PriceGetting(GenericAPIView,ListModelMixin):
     queryset=Prices.objects.all()
     serializer_class=Priceserializer
-
+    
+    @permission_classes([IsAuthenticated])
     def get(self,request) :      
         return self.list(request)
         
@@ -146,3 +173,25 @@ class PriceUpadate(APIView):
         serializer.is_valid()
         serializer.save()
         return Response(serializer.data)
+
+
+
+class PriceInsert(GenericAPIView,CreateModelMixin):
+    queryset=Prices.objects.all()
+    serializer_class=Priceserializer
+    @permission_classes([IsAuthenticated])
+    def post(self,request):
+        print(request.data)
+        listOfPrices = Prices.objects.filter(building_id=request.data.get('building'))
+        print(listOfPrices)
+        count = 0
+        for price in listOfPrices :
+            print(price)
+            if(price.day_type == request.data.get('day_type') and price.vehicle_type == request.data.get('vehicle_type')):
+                count+=1
+        if count == 0 :
+            return self.create(request)
+        try :
+            raise PricesAlreadyAdded()
+        except PricesAlreadyAdded:
+            return JsonResponse({'error':"price already added for this vehicle type"},status=400)

@@ -378,6 +378,23 @@
         "documentation": {}
     },
     {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
         "label": "render",
         "importPath": "django.shortcuts",
         "description": "django.shortcuts",
@@ -399,6 +416,15 @@
         "description": "django.shortcuts",
         "isExtraImport": true,
         "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
         "documentation": {}
     },
     {
@@ -538,6 +564,14 @@
         "documentation": {}
     },
     {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
         "label": "JsonResponse",
         "importPath": "django.http",
         "description": "django.http",
@@ -602,6 +636,38 @@
         "documentation": {}
     },
     {
+        "label": "api_view",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "permission_classes",
+        "importPath": "rest_framework.decorators",
+        "description": "rest_framework.decorators",
+        "isExtraImport": true,
+        "detail": "rest_framework.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "b64encode",
+        "importPath": "base64",
+        "description": "base64",
+        "isExtraImport": true,
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "serialize",
+        "importPath": "django.core.serializers",
+        "description": "django.core.serializers",
+        "isExtraImport": true,
+        "detail": "django.core.serializers",
+        "documentation": {}
+    },
+    {
         "label": "django.contrib.auth.models",
         "kind": 6,
         "isExtraImport": true,
@@ -634,15 +700,6 @@
         "importPath": "django.utils.timezone",
         "description": "django.utils.timezone",
         "detail": "django.utils.timezone",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
         "documentation": {}
     },
     {
@@ -835,23 +892,6 @@
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "datetime",
-        "description": "datetime",
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "math",
         "kind": 6,
         "isExtraImport": true,
@@ -882,14 +922,6 @@
         "description": "rest_framework.permissions",
         "isExtraImport": true,
         "detail": "rest_framework.permissions",
-        "documentation": {}
-    },
-    {
-        "label": "permission_classes",
-        "importPath": "rest_framework.decorators",
-        "description": "rest_framework.decorators",
-        "isExtraImport": true,
-        "detail": "rest_framework.decorators",
         "documentation": {}
     },
     {
@@ -933,7 +965,7 @@
         "kind": 6,
         "importPath": "BuildingDetails.models",
         "description": "BuildingDetails.models",
-        "peekOfCode": "class BuildingDetails(models.Model):\n    building_id = models.AutoField(primary_key=True)\n    building_name = models.CharField(max_length=45)\n    location = models.CharField(max_length=45)\n    status = models.CharField(max_length=45)\n    no_of_floors = models.CharField(max_length=45)\n    images = models.ImageField(upload_to='images/',default='')\n    class Meta:\n        managed = False\n        db_table = 'building_details'",
+        "peekOfCode": "class BuildingDetails(models.Model):\n    building_id = models.AutoField(primary_key=True)\n    building_name = models.CharField(max_length=45)\n    location = models.CharField(max_length=45)\n    status = models.CharField(max_length=45)\n    no_of_floors = models.CharField(max_length=45)\n    images = models.BinaryField()\n    class Meta:\n        managed = False\n        db_table = 'building_details'",
         "detail": "BuildingDetails.models",
         "documentation": {}
     },
@@ -960,7 +992,7 @@
         "kind": 6,
         "importPath": "BuildingDetails.serializers",
         "description": "BuildingDetails.serializers",
-        "peekOfCode": "class FloorSerializer(serializers.ModelSerializer) :\n    # building = BuildingSerializer()\n    class Meta :\n        model = FloorDetails\n        fields = '__all__'\n    # def create(self, validated_data):\n    #     building_data = validated_data.pop('building')\n    #     building = BuildingDetails.objects.filter(**building_data).first()\n    #     floor = FloorDetails.objects.create(building=building,**validated_data)\n    #     return floor",
+        "peekOfCode": "class FloorSerializer(serializers.ModelSerializer) :\n    # building = BuildingSerializer()\n    class Meta :\n        model = FloorDetails\n        fields = '__all__'\nclass FloorsDetailsSerializer(serializers.ModelSerializer):\n    # building = BuildingSerializer(read_only=True)\n    class Meta:\n        model = FloorDetails\n        fields = '__all__'",
         "detail": "BuildingDetails.serializers",
         "documentation": {}
     },
@@ -969,7 +1001,7 @@
         "kind": 6,
         "importPath": "BuildingDetails.serializers",
         "description": "BuildingDetails.serializers",
-        "peekOfCode": "class FloorsDetailsSerializer(serializers.ModelSerializer):\n    # building = BuildingSerializer(read_only=True)\n    class Meta:\n        model = FloorDetails\n        fields = '__all__'\n    # def create(self, validated_data):\n    #     building_data = validated_data.pop('building')\n    #     building_id = building_data.get('building_id')\n    #     building, _ = BuildingDetails.objects.get_or_create(building_id=building_id, defaults=building_data)\n    #     validated_data['building'] = building",
+        "peekOfCode": "class FloorsDetailsSerializer(serializers.ModelSerializer):\n    # building = BuildingSerializer(read_only=True)\n    class Meta:\n        model = FloorDetails\n        fields = '__all__'\nclass SlotSerializer(serializers.ModelSerializer):\n    floor = FloorSerializer()\n    class Meta:\n        model = SlotDetails\n        fields = '__all__'",
         "detail": "BuildingDetails.serializers",
         "documentation": {}
     },
@@ -996,7 +1028,7 @@
         "kind": 6,
         "importPath": "BuildingDetails.serializers",
         "description": "BuildingDetails.serializers",
-        "peekOfCode": "class BuildingSerializer(serializers.ModelSerializer):\n    images = serializers.ImageField(write_only=True)\n    image_url = serializers.SerializerMethodField(read_only=True)\n    class Meta:\n        model = BuildingDetails\n        fields = ['building_id', 'building_name', 'location', 'status', 'images', 'no_of_floors', 'image_url']\n    def validate_images(self, value):\n        if value:\n            w, h = get_image_dimensions(value)\n            if w > 3000 or h > 3000:",
+        "peekOfCode": "class BuildingSerializer(serializers.ModelSerializer):\n    class Meta:\n        model = BuildingDetails\n        fields = ['building_id', 'building_name', 'location', 'status', 'images', 'no_of_floors']",
         "detail": "BuildingDetails.serializers",
         "documentation": {}
     },
@@ -1032,17 +1064,8 @@
         "kind": 5,
         "importPath": "BuildingDetails.urls",
         "description": "BuildingDetails.urls",
-        "peekOfCode": "urlpatterns = [\n    path('addingbuilding/',addingBuilding.as_view(),name='addingBuilding'),\n    path('GettingAllBuildings/',GettingAllBuildings.as_view(),name='GettingAllBuildings'),\n    path('UpdateBuildingAndDeleteBuildingGettingParticularBuilding/<int:pk>/',UpdateBuildingAndDeleteBuildingGettingParticularBuilding.as_view(),name='UpdateBuildingAndDeleteBuildingGettingParticularBuilding'),\n    path('addingFloorAndGetAllFloors/',addingFloorAndGetAllFloors.as_view(),name='insertfloorandgettingall'),\n    path('UpdateFloor/<int:pk>/',UpdateFloor.as_view(),name='UpdateFloor'),\n    path('DeleteFloorsAndGettingParticularfloor/<int:pk>/',DeleteFloorsAndGettingParticularfloor.as_view(),name='DeleteFloorsAndGettingParticularfloor'),\n    path('insertslot/<int:id>/',InsertSlots.as_view(),name='insertslot'),\n    path('buildinginactiveandactive/<int:id>/',BuildingInactiveAndactive.as_view(),name = 'buildinginactive'),\n    path('SlotUpdate/<int:slot_id>/<str:slot_status>/',SlotUpdate.as_view(),name='SlotUpdate'),",
+        "peekOfCode": "urlpatterns = [\n    path('addbuilding/',addingBuilding),\n    path('GettingAllBuildings/',GettingAllBuildings.as_view(),name='GettingAllBuildings'),\n    path('UpdateBuildingAndDeleteBuildingGettingParticularBuilding/<int:pk>/',UpdateBuildingAndDeleteBuildingGettingParticularBuilding.as_view(),name='UpdateBuildingAndDeleteBuildingGettingParticularBuilding'),\n    path('addingFloorAndGetAllFloors/',addingFloorAndGetAllFloors.as_view(),name='insertfloorandgettingall'),\n    path('UpdateFloor/<int:pk>/',UpdateFloor.as_view(),name='UpdateFloor'),\n    path('DeleteFloorsAndGettingParticularfloor/<int:pk>/',DeleteFloorsAndGettingParticularfloor.as_view(),name='DeleteFloorsAndGettingParticularfloor'),\n    path('insertslot/<int:id>/',InsertSlots.as_view(),name='insertslot'),\n    path('buildinginactiveandactive/<int:id>/',BuildingInactiveAndactive.as_view(),name = 'buildinginactive'),\n    path('SlotUpdate/<int:slot_id>/<str:slot_status>/',SlotUpdate.as_view(),name='SlotUpdate'),",
         "detail": "BuildingDetails.urls",
-        "documentation": {}
-    },
-    {
-        "label": "addingBuilding",
-        "kind": 6,
-        "importPath": "BuildingDetails.views",
-        "description": "BuildingDetails.views",
-        "peekOfCode": "class addingBuilding(GenericAPIView,CreateModelMixin,ListModelMixin) :\n    queryset = BuildingDetails.objects.all()\n    serializer_class = BuildingSerializer\n    def post(self,request) :\n        authorization_header = request.headers.get('Authorization')\n        return self.create(request)\nclass GettingAllBuildings(GenericAPIView,ListModelMixin):\n        queryset = BuildingDetails.objects.all()\n        serializer_class = BuildingSerializer\n        def get(self,request) :",
-        "detail": "BuildingDetails.views",
         "documentation": {}
     },
     {
@@ -1050,7 +1073,7 @@
         "kind": 6,
         "importPath": "BuildingDetails.views",
         "description": "BuildingDetails.views",
-        "peekOfCode": "class GettingAllBuildings(GenericAPIView,ListModelMixin):\n        queryset = BuildingDetails.objects.all()\n        serializer_class = BuildingSerializer\n        def get(self,request) :\n            authorization_header = request.headers.get('Authorization')\n            if checkingAuthenticationForEmployee(authorization_header):\n                logging.info(\"From Building Details get method\")\n                logging.info(\"From Building Details GET method to retrive all objects\")\n                return self.list(request)\nclass UpdateBuildingAndDeleteBuildingGettingParticularBuilding(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin) :",
+        "peekOfCode": "class GettingAllBuildings(GenericAPIView,ListModelMixin):\n        queryset = BuildingDetails.objects.all()\n        serializer_class = BuildingSerializer\n        def get(self,request) :\n            authorization_header = request.headers.get('Authorization')\n            if checkingAuthenticationForEmployee(authorization_header):\n                building_details = BuildingDetails.objects.all()\n                data = []\n                for building in building_details:\n                        image_data = building.images",
         "detail": "BuildingDetails.views",
         "documentation": {}
     },
@@ -1064,11 +1087,20 @@
         "documentation": {}
     },
     {
+        "label": "BuildingInactiveAndactive",
+        "kind": 6,
+        "importPath": "BuildingDetails.views",
+        "description": "BuildingDetails.views",
+        "peekOfCode": "class BuildingInactiveAndactive(APIView) :\n    def put(self,request,id):\n        building_details = BuildingDetails.objects.get(building_id=id)\n        active = 'active'\n        inactive = 'inactive'\n        if building_details.status == active:\n            building_details.status = inactive\n            building_details.save()\n        else :\n            building_details.status = active",
+        "detail": "BuildingDetails.views",
+        "documentation": {}
+    },
+    {
         "label": "addingFloorAndGetAllFloors",
         "kind": 6,
         "importPath": "BuildingDetails.views",
         "description": "BuildingDetails.views",
-        "peekOfCode": "class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer\n    def post(self,request):\n        building_name = request.data.get('building')\n        print(building_name,'nnnnnnnnnnnnaaaaaaaammmmmeeeee')\n        location = request.data.get('location')\n        print(BuildingDetails.objects.all()[0].building_id,'==================================')\n        building_data=BuildingDetails.objects.filter(building_name=building_name , location=location).first()\n        # building_data = BuildingDetails.objects.all()[0]",
+        "peekOfCode": "class addingFloorAndGetAllFloors(GenericAPIView,CreateModelMixin,ListModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer\n    def post(self,request):\n        building_name = request.data.get('building')\n        location = request.data.get('location')\n        building_data=BuildingDetails.objects.filter(building_name=building_name , location=location).first()\n        listOfFloors = FloorDetails.objects.filter(building = building_data.building_id)\n        count = 0 \n        if len(listOfFloors) < int(building_data.no_of_floors) and building_data.building_id:",
         "detail": "BuildingDetails.views",
         "documentation": {}
     },
@@ -1077,7 +1109,7 @@
         "kind": 6,
         "importPath": "BuildingDetails.views",
         "description": "BuildingDetails.views",
-        "peekOfCode": "class UpdateFloor(GenericAPIView,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorsDetailsSerializer\n    def put(self,request,**kwargs):\n        logging.info(\"From Floor Details PUT method\")\n        return self.update(request,**kwargs)\nclass DeleteFloorsAndGettingParticularfloor(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer\n    def delete(self,request,**kwargs):",
+        "peekOfCode": "class UpdateFloor(GenericAPIView,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorsDetailsSerializer\n    def put(self,request,**kwargs):\n        logging.info(\"From Floor Details PUT method\")\n        return self.update(request,**kwargs)\n#* Deleting the Floors and getting Floor by id\nclass DeleteFloorsAndGettingParticularfloor(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer",
         "detail": "BuildingDetails.views",
         "documentation": {}
     },
@@ -1086,7 +1118,7 @@
         "kind": 6,
         "importPath": "BuildingDetails.views",
         "description": "BuildingDetails.views",
-        "peekOfCode": "class DeleteFloorsAndGettingParticularfloor(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer\n    def delete(self,request,**kwargs):\n        logging.info(\"From Building Details DELETE method\")\n        return self.destroy(request,**kwargs)\n    def get(self,request,**kwargs):\n        logging.info(\"From Building Details GET method to retrive particular objects\")\n        return self.retrieve(request,**kwargs)\nclass FloorActiveAndInactive(APIView):",
+        "peekOfCode": "class DeleteFloorsAndGettingParticularfloor(GenericAPIView,DestroyModelMixin,RetrieveModelMixin,UpdateModelMixin):\n    queryset = FloorDetails.objects.all()\n    serializer_class = FloorSerializer\n    def delete(self,request,**kwargs):\n        logging.info(\"From Building Details DELETE method\")\n        return self.destroy(request,**kwargs)\n    def get(self,request,**kwargs):\n        logging.info(\"From Building Details GET method to retrive particular objects\")\n        return self.retrieve(request,**kwargs)\n #* changing the floor status    ",
         "detail": "BuildingDetails.views",
         "documentation": {}
     },
@@ -1122,16 +1154,16 @@
         "kind": 6,
         "importPath": "BuildingDetails.views",
         "description": "BuildingDetails.views",
-        "peekOfCode": "class GettingAllSlots(GenericAPIView,ListModelMixin):\n    queryset = SlotDetails.objects.all()\n    serializer_class = SlotDetailsSerializer\n    def get(self,request):\n        return self.list(request)\nclass BuildingInactiveAndactive(APIView) :\n    def put(self,request,id):\n        building_details = BuildingDetails.objects.get(building_id=id)\n        active = 'active'\n        inactive = 'inactive'",
+        "peekOfCode": "class GettingAllSlots(GenericAPIView,ListModelMixin):\n    queryset = SlotDetails.objects.all()\n    serializer_class = SlotDetailsSerializer\n    def get(self,request):\n        return self.list(request)",
         "detail": "BuildingDetails.views",
         "documentation": {}
     },
     {
-        "label": "BuildingInactiveAndactive",
-        "kind": 6,
+        "label": "addingBuilding",
+        "kind": 2,
         "importPath": "BuildingDetails.views",
         "description": "BuildingDetails.views",
-        "peekOfCode": "class BuildingInactiveAndactive(APIView) :\n    def put(self,request,id):\n        building_details = BuildingDetails.objects.get(building_id=id)\n        active = 'active'\n        inactive = 'inactive'\n        if building_details.status == active:\n            building_details.status = inactive\n            building_details.save()\n        else :\n            building_details.status = active",
+        "peekOfCode": "def addingBuilding(request):\n    if request.method == 'POST':\n        image = request.FILES['images'].read()\n        print(request.FILES['images'],'----------------------')\n        building=BuildingDetails()\n        building.building_name=request.data['building_name']\n        building.location=request.data['location']\n        building.status=request.data['status']\n        building.no_of_floors=request.data['no_of_floors']\n        building.images=image",
         "detail": "BuildingDetails.views",
         "documentation": {}
     },
@@ -1176,7 +1208,7 @@
         "kind": 6,
         "importPath": "employee_authentication.models",
         "description": "employee_authentication.models",
-        "peekOfCode": "class EmployeeDetails(AbstractUser):\n    employee_name = models.CharField(max_length=45)\n    role = models.CharField(max_length=45)\n    mobile_number = models.CharField(max_length=45)\n    email_id = models.CharField(max_length=45,unique=True)\n    password = models.CharField(max_length=45)\n    location = models.CharField(max_length=45)\n    USERNAME_FIELD='email_id'\n    REQUIRED_FIELDS=[]\n    class Meta:",
+        "peekOfCode": "class EmployeeDetails(AbstractUser):\n    employee_name = models.CharField(max_length=45)\n    role = models.CharField(max_length=45)\n    mobile_number = models.CharField(max_length=45)\n    email_id = models.CharField(max_length=45,unique=True)\n    password = models.CharField(max_length=45)\n    location = models.CharField(max_length=45)\n    image = models.BinaryField(blank=True, null=True)\n    USERNAME_FIELD='email_id'\n    REQUIRED_FIELDS=[]",
         "detail": "employee_authentication.models",
         "documentation": {}
     },
@@ -1185,17 +1217,8 @@
         "kind": 6,
         "importPath": "employee_authentication.serializers",
         "description": "employee_authentication.serializers",
-        "peekOfCode": "class EmployeeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model=EmployeeDetails\n        fields = ['id','email_id','password','employee_name','role','mobile_number','location']\n        extra_kwargs={\n            'password':{'write_only':True}\n        }\n    def create(self, validated_data):\n        password=validated_data.pop('password',None)\n        instance=self.Meta.model(**validated_data)",
+        "peekOfCode": "class EmployeeSerializer(serializers.ModelSerializer):\n    class Meta:\n        model=EmployeeDetails\n        fields = ['id','email_id','password','employee_name','role','mobile_number','location','image']\n        extra_kwargs={\n            'password':{'write_only':True}\n        }\n    def create(self, validated_data):\n        password=validated_data.pop('password',None)\n        instance=self.Meta.model(**validated_data)",
         "detail": "employee_authentication.serializers",
-        "documentation": {}
-    },
-    {
-        "label": "sending_jsonObject",
-        "kind": 2,
-        "importPath": "employee_authentication.service_of_empoyee",
-        "description": "employee_authentication.service_of_empoyee",
-        "peekOfCode": "def sending_jsonObject(current_object):\n    data={\n        \"employee_name\":current_object.employee_name,\n        \"role\":current_object.role,\n        \"mobile_number\":current_object.mobile_number,\n        \"email_id\":current_object.email_id,\n        \"location\":current_object.location,\n        }\n    json_data =json.dumps(data)\n    print(type(json_data))",
-        "detail": "employee_authentication.service_of_empoyee",
         "documentation": {}
     },
     {
@@ -1221,7 +1244,7 @@
         "kind": 6,
         "importPath": "employee_authentication.views",
         "description": "employee_authentication.views",
-        "peekOfCode": "class EmployeeRegister(GenericAPIView,CreateModelMixin):\n    serializer_class=EmployeeSerializer\n    queryset=EmployeeDetails.objects.all()\n    @csrf_exempt\n    def post(self,request):\n        return self.create(request)\n#* this is the Employeee Login Method and user will get JWT token heare \nclass EmployeeLogin(APIView):\n    def post(self,request):        \n        email=request.data['email_id']",
+        "peekOfCode": "class EmployeeRegister(GenericAPIView,CreateModelMixin):\n    serializer_class=EmployeeSerializer\n    queryset=EmployeeDetails.objects.all()\n    @csrf_exempt\n    def post(self,request):\n        print(request.data)\n        image = request.FILES['image'].read()\n        request.data['image']=image\n        print(request.data,'7777777777777777777777777777777777777777777777')\n        return self.create(request)",
         "detail": "employee_authentication.views",
         "documentation": {}
     },
@@ -1230,7 +1253,7 @@
         "kind": 6,
         "importPath": "employee_authentication.views",
         "description": "employee_authentication.views",
-        "peekOfCode": "class EmployeeLogin(APIView):\n    def post(self,request):        \n        email=request.data['email_id']\n        password=request.data['password']\n        employee=EmployeeDetails.objects.filter(email_id=email)\n        serializer=EmployeeSerializer(data=employee,many=True)\n        serializer.is_valid()\n        x=((serializer.data))\n        if employee is None or len(employee)==0:\n            raise AuthenticationFailed(\"Invalid User \")",
+        "peekOfCode": "class EmployeeLogin(APIView):\n    def post(self,request):        \n        email=request.data['email_id']\n        password=request.data['password']\n        employee=EmployeeDetails.objects.filter(email_id=email)\n        serializer=EmployeeSerializer(data=employee,many=True)\n        serializer.is_valid()\n        x=serializer.data\n        if employee is None or len(employee)==0:\n            raise AuthenticationFailed(\"Invalid User \")",
         "detail": "employee_authentication.views",
         "documentation": {}
     },
@@ -1239,7 +1262,7 @@
         "kind": 6,
         "importPath": "employee_authentication.views",
         "description": "employee_authentication.views",
-        "peekOfCode": "class GettingAllEmployeeList(APIView):\n    def get(self,request):\n        authorization_header = request.headers.get('Authorization')\n        if not authorization_header:\n            raise AuthenticationFailed(\"Unauthenticated\")\n        try:\n            token = authorization_header.split(' ')[1]\n            payload = jwt.decode(token, 'secret', algorithms=['HS256'])\n            print(payload)\n            currentuser=payload.get('id')",
+        "peekOfCode": "class GettingAllEmployeeList(APIView):\n    def get(self,request):\n        authorization_header = request.headers.get('Authorization')\n        if not authorization_header:\n            raise AuthenticationFailed(\"Unauthenticated ok this new\")\n        try:\n            token = authorization_header.split(' ')[1]\n            payload = jwt.decode(token, 'secret', algorithms=['HS256'])\n            print(payload)\n            currentuser=payload.get('id')",
         "detail": "employee_authentication.views",
         "documentation": {}
     },
@@ -1266,7 +1289,7 @@
         "kind": 6,
         "importPath": "employee_authentication.views",
         "description": "employee_authentication.views",
-        "peekOfCode": "class DeletingEmployees(GenericAPIView,DestroyModelMixin):\n    queryset=EmployeeDetails.objects.all()\n    serializer_class=EmployeeDetails\n    def delete(self, request, **kwargs):\n        authorization_header = request.headers.get('Authorization')\n        try:\n            if checkingAuthenticationForAdmin(authorization_header):\n                # email=request.data['email']\n                # employee=EmployeeDetails.objects.get(email_id=email)\n                # print(employee.employee_name)",
+        "peekOfCode": "class DeletingEmployees(GenericAPIView,DestroyModelMixin):\n    queryset=EmployeeDetails.objects.all()\n    serializer_class=EmployeeDetails\n    def delete(self, request, **kwargs):\n        authorization_header = request.headers.get('Authorization')\n        try:\n            if checkingAuthenticationForAdmin(authorization_header):\n                return self.destroy(request,**kwargs)\n        except ObjectDoesNotExist as e:\n            return JsonResponse({'error': str(e)}, status=400)",
         "detail": "employee_authentication.views",
         "documentation": {}
     },
@@ -1473,7 +1496,7 @@
         "kind": 5,
         "importPath": "Smartparking.settings",
         "description": "Smartparking.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ... other settings ...\n# Media files (uploaded files)\nMEDIA_ROOT = BASE_DIR / 'media'\nMEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# ... other settings ...\n# Media files (uploaded files)\nMEDIA_ROOT = BASE_DIR / 'media'\nMEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# settings.py\nDEFAULT_CHARSET = 'utf-8'",
         "detail": "Smartparking.settings",
         "documentation": {}
     },
@@ -1482,7 +1505,7 @@
         "kind": 5,
         "importPath": "Smartparking.settings",
         "description": "Smartparking.settings",
-        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nMEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "peekOfCode": "MEDIA_ROOT = BASE_DIR / 'media'\nMEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# settings.py\nDEFAULT_CHARSET = 'utf-8'\nDEFAULT_CONTENT_TYPE = 'text/html'",
         "detail": "Smartparking.settings",
         "documentation": {}
     },
@@ -1491,7 +1514,7 @@
         "kind": 5,
         "importPath": "Smartparking.settings",
         "description": "Smartparking.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "peekOfCode": "MEDIA_URL = '/media/'\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# settings.py\nDEFAULT_CHARSET = 'utf-8'\nDEFAULT_CONTENT_TYPE = 'text/html'",
         "detail": "Smartparking.settings",
         "documentation": {}
     },
@@ -1500,7 +1523,7 @@
         "kind": 5,
         "importPath": "Smartparking.settings",
         "description": "Smartparking.settings",
-        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "peekOfCode": "STATIC_URL = '/static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# settings.py\nDEFAULT_CHARSET = 'utf-8'\nDEFAULT_CONTENT_TYPE = 'text/html'",
         "detail": "Smartparking.settings",
         "documentation": {}
     },
@@ -1509,7 +1532,25 @@
         "kind": 5,
         "importPath": "Smartparking.settings",
         "description": "Smartparking.settings",
-        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'static')\n# settings.py\nDEFAULT_CHARSET = 'utf-8'\nDEFAULT_CONTENT_TYPE = 'text/html'",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_CHARSET",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "DEFAULT_CHARSET = 'utf-8'\nDEFAULT_CONTENT_TYPE = 'text/html'",
+        "detail": "Smartparking.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_CONTENT_TYPE",
+        "kind": 5,
+        "importPath": "Smartparking.settings",
+        "description": "Smartparking.settings",
+        "peekOfCode": "DEFAULT_CONTENT_TYPE = 'text/html'",
         "detail": "Smartparking.settings",
         "documentation": {}
     },
@@ -1518,7 +1559,7 @@
         "kind": 5,
         "importPath": "Smartparking.urls",
         "description": "Smartparking.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('Employee/',include('employee_authentication.urls')),\n    path('building/',include('BuildingDetails.urls')),\n    path('pdf/',GetVehicledetails.as_view(),name='payslip.pdf'),\n    path('vehicleparking/',include('Vehicalparkingapp.urls'))\n]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('Employee/',include('employee_authentication.urls')),\n    path('building/',include('BuildingDetails.urls')),\n    path('pdf/',GetVehicledetails.as_view(),name='payslip.pdf'),\n    path('vehicleparking/',include('Vehicalparkingapp.urls'))\n]",
         "detail": "Smartparking.urls",
         "documentation": {}
     },

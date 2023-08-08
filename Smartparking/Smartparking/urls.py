@@ -25,12 +25,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('Employee/',include('employee_authentication.urls')),
     path('building/',include('BuildingDetails.urls')),
-
-
     path('pdf/',GetVehicledetails.as_view(),name='payslip.pdf'),
-
-
     path('vehicleparking/',include('Vehicalparkingapp.urls'))
 
 
-]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]

@@ -6,5 +6,7 @@ urlpatterns = [
     path('EmployeeLogin/',EmployeeLogin.as_view(),name='EmployeeLogin'),
     path('GettingAllEmployeeList/',GettingAllEmployeeList.as_view(),name='GettingAllEmployeeList'),
     path('EmployeeLogout/',EmployeeLogout.as_view(),name='EmployeeLogout'),
+    path('EmployeeRoleUpadate/',EmployeeRoleUpadate.as_view(),name='EmployeeRoleUpadate'),
+    path('DeletingEmployees/<int:pk>/',DeletingEmployees.as_view(),name='DeletingEmployees'),
 
 ]

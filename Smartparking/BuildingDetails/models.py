@@ -7,7 +7,7 @@ class BuildingDetails(models.Model):
     location = models.CharField(max_length=45)
     status = models.CharField(max_length=45)
     no_of_floors = models.CharField(max_length=45)
-    images = models.ImageField(upload_to='images/',default='')
+    images = models.BinaryField()
 
 
     class Meta:
@@ -36,3 +36,6 @@ class SlotDetails(models.Model):
     class Meta:
         managed = False
         db_table = 'slot_details'
+
+
+

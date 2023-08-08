@@ -4,3 +4,6 @@ class VehicleNotFound(Exception):
 
 class InvalidSlot(Exception):
     pass
+
+class PricesAlreadyAdded(Exception):
+    pass

@@ -5,22 +5,13 @@ from django.utils.encoding import smart_str
 from django.conf import settings
 import logging
 
-# class BuildingSerializer(serializers.ModelSerializer) :
-#     class Meta :
-#         model = BuildingDetails
-#         fields = '__all__'
+
 
 class FloorSerializer(serializers.ModelSerializer) :
     # building = BuildingSerializer()
     class Meta :
         model = FloorDetails
         fields = '__all__'
-    
-    # def create(self, validated_data):
-    #     building_data = validated_data.pop('building')
-    #     building = BuildingDetails.objects.filter(**building_data).first()
-    #     floor = FloorDetails.objects.create(building=building,**validated_data)
-    #     return floor
     
 class FloorsDetailsSerializer(serializers.ModelSerializer):
     # building = BuildingSerializer(read_only=True)
@@ -29,14 +20,6 @@ class FloorsDetailsSerializer(serializers.ModelSerializer):
         model = FloorDetails
         fields = '__all__'
 
-    
-    # def create(self, validated_data):
-    #     building_data = validated_data.pop('building')
-    #     building_id = building_data.get('building_id')
-    #     building, _ = BuildingDetails.objects.get_or_create(building_id=building_id, defaults=building_data)
-    #     validated_data['building'] = building
-    #     floor = FloorDetails.objects.create(**validated_data)
-    #     return floor
 
 class SlotSerializer(serializers.ModelSerializer):
     floor = FloorSerializer()
@@ -70,34 +53,9 @@ class SlotDetailsSerializer(serializers.ModelSerializer):
 #* building serilizers
 
 class BuildingSerializer(serializers.ModelSerializer):
-    images = serializers.ImageField(write_only=True)
-    image_url = serializers.SerializerMethodField(read_only=True)
-
     class Meta:
         model = BuildingDetails
-        fields = ['building_id', 'building_name', 'location', 'status', 'images', 'no_of_floors', 'image_url']
+        fields = ['building_id', 'building_name', 'location', 'status', 'images', 'no_of_floors']
 
-    def validate_images(self, value):
-        if value:
-            w, h = get_image_dimensions(value)
-            if w > 3000 or h > 3000:
-                raise serializers.ValidationError("The image dimensions should not exceed 1920x1080 pixels.")
-        return value
-
-    def get_image_url(self, obj):
-        logging.error("+++++++++++++++++++")
-        logging.error(obj)
-        if obj.images:
-            image_path = smart_str(obj.images)
-            return self.context['request'].build_absolute_uri(settings.MEDIA_URL + image_path)
-        return None
-
-    def create(self, validated_data):
-        image = validated_data.pop('images', None)
-        building = BuildingDetails.objects.create(**validated_data)
-
-        if image:
-            building.images = image
-            building.save()
-
-        return building
+   
+    

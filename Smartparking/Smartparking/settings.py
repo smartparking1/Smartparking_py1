@@ -86,9 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'parking_management',
         'USER' : 'root',
-
         'PASSWORD' : 'root',
-
         'PORT' : '3306',
         'HOST' : 'localhost',
     }
@@ -153,3 +151,7 @@ MEDIA_URL = '/media/'
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# settings.py
+DEFAULT_CHARSET = 'utf-8'
+DEFAULT_CONTENT_TYPE = 'text/html'

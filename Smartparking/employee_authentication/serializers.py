@@ -4,7 +4,7 @@ from .models import *
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model=EmployeeDetails
-        fields = ['id','email_id','password','employee_name','role','mobile_number','location']
+        fields = ['id','email_id','password','employee_name','role','mobile_number','location','image']
         extra_kwargs={
             'password':{'write_only':True}
         }
@@ -17,6 +17,3 @@ class EmployeeSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
         
-
-
-   
